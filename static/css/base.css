@@ -1,0 +1,38 @@
+/* Nav Bar */
+.navbar {
+    background-color: black;
+}
+
+.fa-bars {
+    color: rgb(0,205,255);
+    font-size: 28px;
+}
+
+.nav-link {
+    color: rgb(0,205,255);
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 150%;
+}
+
+.dropdown-item,
+.dropdown-menu 
+{
+    background-color: black;
+    color: rgb(0,205,255);
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+.dropdown-item:hover{
+    background-color: rgb(0,205,255);
+    color: black;
+}
+
+ul {
+    list-style: none;
+}
+
+.basket-label,
+.basket-icon
+{
+    font-size: 90%;
+}
