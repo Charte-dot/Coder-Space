@@ -1,29 +1,48 @@
+html {
+    height: 100%;
+}
+
+/* Body */
+body {
+    background: url('/static/img/hero-image.png')no-repeat center center fixed;
+    background-size: cover;
+    background-size: 100% 100%;
+
+}
+
+.btn-secondary {
+    background: rgb(0, 205, 255);
+    color: rgb(2, 2, 2);
+    min-width: 260px;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
 /* Nav Bar */
 .navbar {
     background-color: black;
 }
 
 .fa-bars {
-    color: rgb(0,205,255);
+    color: rgb(0, 205, 255);
     font-size: 28px;
 }
 
 .nav-link {
-    color: rgb(0,205,255);
+    color: rgb(0, 205, 255);
     font-family: 'Chakra Petch', sans-serif;
     font-size: 150%;
 }
 
 .dropdown-item,
-.dropdown-menu 
-{
+.dropdown-menu,
+.form-control {
     background-color: black;
-    color: rgb(0,205,255);
+    color: rgb(0, 205, 255);
     font-family: 'Chakra Petch', sans-serif;
 }
 
-.dropdown-item:hover{
-    background-color: rgb(0,205,255);
+.dropdown-item:hover {
+    background-color: rgb(0, 205, 255);
     color: black;
 }
 
@@ -32,7 +51,46 @@ ul {
 }
 
 .basket-label,
-.basket-icon
-{
+.basket-icon {
     font-size: 90%;
+}
+
+/* banner */
+#banner {
+    background-color: black;
+    color: #f6f4f3;
+    font-family: 'Rokkitt', sans-serif;
+    border-style: dashed;
+    border-color: rgb(0, 205, 255);
+
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    margin-bottom: 0;
+    
+    bottom: 0;
+    width: 100%;
+    padding-top: 10px;
+    background-color: black;
+    color: rgb(0, 205, 255);
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 80%;
+    
+}
+
+.footer-menu {
+    font-family: 'Chakra Petch', sans-serif;
+    color: rgb(0, 205, 255);
+}
+
+.social-links {
+    font-family: 'Chakra Petch', sans-serif;
+    color: rgb(0, 205, 255);
+    font-size: 120%;
+}
+
+.footer-copyright {
+    margin-top: 0;
 }

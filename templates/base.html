@@ -46,99 +46,106 @@
 </head>
 
 <body>
-    <header class="container-fluid fixed-top"></header>
-    <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="{% url 'home' %}">
-            <img src="{% static 'img/logo.png' %}" alt="blue robot" class="logo-img" width="230" height="60">
-        </a>
+    <header class="container-fluid fixed-top">
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon">
-                <i class="fas fa-bars"></i>
-            </span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
+        <nav class="navbar navbar-expand-lg row bg-black pt-lg-2 d-none d-lg-flex">
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <img src="{% static 'img/logo.png' %}" alt="blue robot" class="logo-img" width="250" height="60">
+            </a>
 
-                <ul class="navbar-nav nav justify-content-center">
-                    <li class="nav-item {% if request.path == '/' %}active{% endif %}">
-                        <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item dropdown {% if '/products/' in request.path %}active{% endif %} ">
-                        <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-expanded="false">
-                            Shop
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="">All Products</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <i class="fas fa-bars"></i>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
 
-                                <ul>
-                                    <li><a class="dropdown-item" href="">Chairs</a></li>
-                                    <li><a class="dropdown-item" href="">Desks</a></li>
-                                    <li><a class="dropdown-item" href="">Mouse & Keyboards</a></li>
-                                    <li><a class="dropdown-item" href="">CPU'S & Screens</a></li>
-                                    <li><a class="dropdown-item" href="">Headsets & Speakers</a></li>
-                                    <li><a class="dropdown-item" href="">Lights</a></li>
-                                    <li><a class="dropdown-item" href="">Wall Art</a></li>
-                                    <li><a class="dropdown-item" href="">Accessories</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    <li class="nav-item dropdown {% if '/products/' in request.path %}active{% endif %}">
-                        <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-expanded="false">
-                            Account
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="user-options">
-                            {% if request.user.is_authenticated %}
-                            {% if request.user.is_superuser %}
-                            <a href="" class="dropdown-item">Add Product</a>
-                            {% endif %}
-                            <a href="" class="dropdown-item">My Profile</a>
-                            <a href="" class="dropdown-item">Logout</a>
-                            {% else %}
-                            <a href="" class="dropdown-item">Register</a>
-                            <a href="" class="dropdown-item">Login</a>
-                            {% endif %}
-                        </div>
-                    </li>
+                    <ul class="navbar-nav nav justify-content-center">
+                        <li class="nav-item {% if request.path == '/' %}active{% endif %}">
+                            <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item dropdown {% if '/products/' in request.path %}active{% endif %} ">
+                            <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-expanded="false">
+                                Shop
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="">All Products</a>
 
-                    <li class="nav-item">
-                        <form method="GET" action="">
-                            <div class="input-group w-80 topnav-centered">
-                                <input class="form-control my-2 my-sm-0" type="text" name="q" placeholder="Search Shop"
-                                    aria-label="Search box">
-                                <div class="input-group-append search-icon">
-                                    <button class="form-control btn btn-outline-secondary my-2 my-sm-0" type="submit"
-                                        value="Search" aria-label="search">
-                                        <span class="icon">
-                                            <i class="fas fa-search" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="sr-only">search</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </li>
-                </ul>
-
-                <li class="nav-item d-none d-lg-inline-block">
-                    <a class="{% if grand_total %}text-info font-weight-bold{% else %}{% endif %} nav-link" href="">
-                        <div class="basket-icon"><span class="icon"><i class="fas fa-shopping-bag"></i></span>
-                            <p class="my-0 basket-label">
-                                {% if grand_total %}
-                                €{{ grand_total|floatformat:2 }}
-                                {% else %}
-                                €0.00
+                                    <ul>
+                                        <li><a class="dropdown-item" href="">Chairs</a></li>
+                                        <li><a class="dropdown-item" href="">Desks</a></li>
+                                        <li><a class="dropdown-item" href="">Mouse & Keyboards</a></li>
+                                        <li><a class="dropdown-item" href="">CPU'S & Screens</a></li>
+                                        <li><a class="dropdown-item" href="">Headsets & Speakers</a></li>
+                                        <li><a class="dropdown-item" href="">Lights</a></li>
+                                        <li><a class="dropdown-item" href="">Wall Art</a></li>
+                                        <li><a class="dropdown-item" href="">Accessories</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        <li class="nav-item dropdown {% if '/products/' in request.path %}active{% endif %}">
+                            <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-expanded="false">
+                                Account
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="user-options">
+                                {% if request.user.is_authenticated %}
+                                {% if request.user.is_superuser %}
+                                <a href="" class="dropdown-item">Add Product</a>
                                 {% endif %}
-                            </p>
-                        </div>
-                    </a>
-                </li>
-        </div>
+                                <a href="" class="dropdown-item">My Profile</a>
+                                <a href="" class="dropdown-item">Logout</a>
+                                {% else %}
+                                <a href="" class="dropdown-item">Register</a>
+                                <a href="" class="dropdown-item">Login</a>
+                                {% endif %}
+                            </div>
+                        </li>
 
-    </nav>
+                        <li class="nav-item">
+                            <form method="GET" action="">
+                                <div class="input-group w-80 ">
+                                    <input class="form-control my-2 my-sm-0" type="text" name="q"
+                                        placeholder="Search Shop" aria-label="Search box">
+                                    <div class="input-group-append search-icon">
+                                        <button class="form-control btn btn-outline-secondary my-2 my-sm-0"
+                                            type="submit" value="Search" aria-label="search">
+                                            <span class="icon">
+                                                <i class="fas fa-search" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="sr-only">search</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+
+                    <li class="nav-item d-none d-lg-inline-block">
+                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}{% endif %} nav-link" href="">
+                            <div class="basket-icon"><span class="icon"><i class="fas fa-shopping-bag"></i></span>
+                                <p class="my-0 basket-label">
+                                    {% if grand_total %}
+                                    €{{ grand_total|floatformat:2 }}
+                                    {% else %}
+                                    €0.00
+                                    {% endif %}
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+            </div>
+        </nav>
+
+        <div class="row text-center" id="banner">
+            <div class="col banner-text p-2">
+                <h4><a href=""></a> Free delivery on orders over €{{ free_delivery_threshold }}!</h4>
+            </div>
+        </div>
+    </header>
 
 
     {% if messages %}
@@ -154,7 +161,101 @@
     {% block postloadjs %}
     {% endblock %}
 
+    <!-- Footer -->
+    <footer id="footer" class="footer-1 page-footer">
+        <div class="main-footer widgets-dark typo-light">
+            <div class="container">
+                <div class="row">
 
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div class="widget no-box">
+                            <h5 class="widget-title">Shop<span></span></h5>
+                            <ul class="thumbnail-widget">
+                                <li>
+                                    <a href="">Chairs</a>
+                                </li>
+                                <li>
+                                    <a href="">Desks</a>
+                                </li>
+                                <li>
+                                    <a href="">Mouse & Keybords</a>
+                                </li>
+                                <li>
+                                    <a href="">CPU's & Screens</a>
+                                </li>
+                                <li>
+                                    <a href="">Headsets & Speakers</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div class="widget no-box">
+                            <h5 class="widget-title">Quick Links<span></span></h5>
+                            <ul class="thumbnail-widget">
+                                <li>
+                                    <a href="{% url 'home' %}">Home</a>
+                                </li>
+                                <li>
+                                    <a href="">About</a>
+                                </li>
+                                <li>
+                                    <a href="">Contact</a>
+                                </li>
+                                <li>
+                                    <a href="">Privacy Policy</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div class="widget no-box">
+                            <h5 class="widget-title">Subscribe<span></span></h5>
+                            <p>Sign up to our mailing list</p>
+                            <a class="btn-secondary" href="#">Subscribe Now</a>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                        <div class="widget no-box">
+                            <h5 class="widget-title social-links">Contact Us<span></span></h5>
+                            <ul class="social-footer2">
+                                <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Visit our Facebook page 
+                                (opens in a new tab)" title="Facebook">
+                                        <i class="fab fa-facebook-square mx-1 social-links"></i></a>
+                                </li>
+                                <li><a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Visit our Twitter page 
+                                    (opens in a new tab)" title="Twitter">
+                                        <i class="fab fa-twitter-square mx-1 social-links"></i></a>
+                                </li>
+                                <li><a title="instagram" target="_blank" rel="noopener" aria-label="Visit our Instagram page 
+                                    (opens in a new tab)" href="https://www.instagram.com/">
+                                        <i class="fab fa-instagram-square mx-1 social-links"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p>© 2022 Copyright:
+                            <a href="https://github.com/Charte-dot" target="_blank" rel="noopener" aria-label="Caroline Harte's Github repo
+                                (opens in a new tab)" class="footer-menu"><span
+                                    class="title-font display-colour">Charte</span>
+                            </a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
