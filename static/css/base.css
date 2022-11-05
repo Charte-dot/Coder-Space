@@ -1,36 +1,92 @@
 html {
     height: 100%;
+    overflow-x: hidden;
+
 }
 
 /* Body */
 body {
-    background: url('/static/img/hero-image.png')no-repeat center center fixed;
-    background-size: cover;
-    background-size: 100% 100%;
+    margin: 0;
+    font-family: 'Chakra Petch', sans-serif;
 
 }
 
-.btn-secondary {
-    background: rgb(0, 205, 255);
-    color: rgb(2, 2, 2);
-    min-width: 260px;
+/* Shop now button */
+.hero {
+    /* Sizing */
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url(/static/img/hero-image.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    }
+
+
+.hero .btn {
+    position: absolute;
+    display: block;
+    width: 200px;
+    padding: 0.5em;
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(247, 246, 246);
+    text-decoration: none;
+    font-size: 140%;
     font-family: 'Chakra Petch', sans-serif;
+    border: 5px solid rgb(255, 255, 255);
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 2px 5px rgb(0, 205, 255);
+    
+
+}
+
+.hero .btn:hover {
+    background-color: rgba(0, 205, 255, 0.8);
 }
 
 /* Nav Bar */
-.navbar {
+#topnav {
     background-color: black;
+    box-shadow: 0px 25px 20px -20px rgba(0, 205, 255);
 }
 
+.navbar {
+    position: relative;
+    background-color: black;
+    box-shadow: 0px 25px 20px -20px rgba(0, 205, 255);
+    }
+    
 .fa-bars {
     color: rgb(0, 205, 255);
     font-size: 28px;
+    border-color:rgb(0, 205, 255); ;
+}
+
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+    }
+
+.navbar-toggler{
+    background-color: rgb(3, 3, 3);
+    font-size: 20px;
 }
 
 .nav-link {
     color: rgb(0, 205, 255);
     font-family: 'Chakra Petch', sans-serif;
-    font-size: 150%;
+    font-size: 120%;
 }
 
 .dropdown-item,
@@ -39,15 +95,13 @@ body {
     background-color: black;
     color: rgb(0, 205, 255);
     font-family: 'Chakra Petch', sans-serif;
+    z-index: 999;
+    
 }
 
 .dropdown-item:hover {
     background-color: rgb(0, 205, 255);
     color: black;
-}
-
-ul {
-    list-style: none;
 }
 
 .basket-label,
@@ -57,40 +111,54 @@ ul {
 
 /* banner */
 #banner {
+    
     background-color: black;
     color: #f6f4f3;
     font-family: 'Rokkitt', sans-serif;
-    border-style: dashed;
-    border-color: rgb(0, 205, 255);
+    box-shadow: 0px 2px 5px rgb(0, 205, 255);
 
 }
 
 /* Footer */
 footer {
-    position: fixed;
-    margin-bottom: 0;
-    
-    bottom: 0;
-    width: 100%;
-    padding-top: 10px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 205, 255);
+    height: 50%;
+    width: 100vw;
+    left:0;
+    right: 0;
     background-color: black;
     color: rgb(0, 205, 255);
     font-family: 'Chakra Petch', sans-serif;
     font-size: 80%;
-    
+    box-shadow: 0px 5px 15px rgba(0, 205, 255);
+}
+
+h5 {
+    margin-top: 5%;
+    font-size: 170%;
+    text-decoration: underline;
 }
 
 .footer-menu {
+    margin-top: 5%;
     font-family: 'Chakra Petch', sans-serif;
     color: rgb(0, 205, 255);
+    font-size: 140%;
 }
 
-.social-links {
+.footer-link {
+    
     font-family: 'Chakra Petch', sans-serif;
     color: rgb(0, 205, 255);
     font-size: 120%;
 }
 
-.footer-copyright {
-    margin-top: 0;
+.social-links {
+    font-family: 'Chakra Petch', sans-serif;
+    color: rgb(0, 205, 255);
+    font-size: 150%;
+}
+
+.icon {
+    color: rgb(0, 205, 255) ;
 }
