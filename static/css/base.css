@@ -135,8 +135,6 @@ footer {
     box-shadow: 0px 5px 15px rgba(0, 205, 255);
 }
 
-
-
 h5 {
     margin-top: 5%;
     font-size: 170%;
@@ -170,4 +168,15 @@ h5 {
 .login,
 .logout {
     margin-top: 20%;
+}
+
+/* Products Page */
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: white;
+    z-index: -1;
 }
