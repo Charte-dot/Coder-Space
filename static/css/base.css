@@ -8,6 +8,7 @@ html {
 body {
     margin: 0;
     font-family: 'Chakra Petch', sans-serif;
+    padding-top: 200px;
 
 }
 
@@ -172,6 +173,7 @@ h5 {
 
 /* Products Page */
 .overlay {
+    margin-top: 25%;
     height: 100%;
     width: 100%;
     top: 0;
@@ -179,4 +181,32 @@ h5 {
     position: fixed;
     background: white;
     z-index: -1;
+}
+
+.card {
+    border: 4px;
+    border-style: ridge;
+    border-color: rgb(0, 205, 255);
+}
+
+.card-body {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 120%;
+}
+
+.card-footer {
+    background-color: black;
+    font-family: 'Chakra Petch', sans-serif;
+    color: rgb(0, 205, 255);
+    font-size: 180%;
+}
+
+.lead {
+    font-size: 90%;
+}
+
+.rating {
+    font-family: 'Chakra Petch', sans-serif;
+    color: rgb(0, 205, 255);
+    font-size: 60%;
 }
