@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Product
 
 
@@ -12,3 +12,27 @@ def all_products(request):
     }
 
     return render(request, 'products/products.html', context)
+
+
+def product_detail(request, product_id):
+    """A view to show individual product details"""
+
+    product = get_object_or_404(Product, pk=product_id)
+
+    context = {
+        'product': product,
+    }
+
+    return render(request, 'products/product_detail.html', context)
+
+
+def Review_rate(request):
+    if request.method == "GET":
+        product_id = request.GET('product_id')
+        product = Product.objects.get(id=product_id)
+        comment = request.GET('comment')
+        rate = request.GET.get('rate')
+        user = request.user
+        Review(user=user, product=product, comment=comment, rate=rate).save()
+
+        return redirect('product_detail', id=product_id)

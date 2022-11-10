@@ -8,25 +8,21 @@ html {
 body {
     margin: 0;
     font-family: 'Chakra Petch', sans-serif;
-    padding-top: 200px;
-
 }
 
-/* Shop now button */
 .hero {
-    /* Sizing */
     width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-image: url(/static/img/hero-image.png);
+    background-image: url(/static/images/hero-image.png);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    }
+}
 
 
 .hero .btn {
@@ -77,6 +73,7 @@ body {
     justify-content: center;
     height: 1.5rem;
     width: 1.5rem;
+    color: rgb(0, 205, 255) ;
     }
 
 .navbar-toggler{
@@ -111,8 +108,7 @@ body {
 }
 
 /* banner */
-#banner {
-    
+#delivery-banner {
     background-color: black;
     color: #f6f4f3;
     font-family: 'Rokkitt', sans-serif;
@@ -122,7 +118,6 @@ body {
 
 /* Footer */
 footer {
-    
     left: 0px;
     right: 0px;
     margin-bottom: 0px;
@@ -162,8 +157,10 @@ h5 {
     font-size: 150%;
 }
 
-.icon {
-    color: rgb(0, 205, 255) ;
+.social-links:hover,
+.footer-link:hover,
+.nav-link:hover {
+    color: white;
 }
 
 .login,
@@ -173,7 +170,7 @@ h5 {
 
 /* Products Page */
 .overlay {
-    margin-top: 25%;
+    padding-top: 200%;
     height: 100%;
     width: 100%;
     top: 0;
@@ -187,6 +184,11 @@ h5 {
     border: 4px;
     border-style: ridge;
     border-color: rgb(0, 205, 255);
+}
+
+.card-container
+{
+    margin-top: 15%;
 }
 
 .card-body {
@@ -209,4 +211,9 @@ h5 {
     font-family: 'Chakra Petch', sans-serif;
     color: rgb(0, 205, 255);
     font-size: 60%;
+}
+
+.prod-name {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 180%;
 }
