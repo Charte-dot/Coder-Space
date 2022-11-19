@@ -168,9 +168,9 @@ h5 {
     margin-top: 20%;
 }
 
-/* Products Page */
-.overlay {
-    padding-top: 200%;
+/* Product detail Page */
+.overlay-products {
+    padding-top: 15%;
     height: 100%;
     width: 100%;
     top: 0;
@@ -204,7 +204,13 @@ h5 {
 }
 
 .lead {
-    font-size: 90%;
+    font-size: 120%;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+.rate {
+    font-size: 100%;
+    font-family: 'Chakra Petch', sans-serif;
 }
 
 .rating {
@@ -213,7 +219,19 @@ h5 {
     font-size: 60%;
 }
 
+.product-details-container{
+    margin-top: 10%;
+
+
+}
+
 .prod-name {
+    margin-top: 10%;
     font-family: 'Chakra Petch', sans-serif;
     font-size: 180%;
 }
+
+.overlay-details {
+    margin-top: 10%;
+}
+

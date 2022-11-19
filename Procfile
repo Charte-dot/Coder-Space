@@ -1,0 +1,1 @@
+web: gunicorn coder_space.wsgi:application
