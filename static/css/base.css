@@ -183,7 +183,12 @@ h5 {
 .card {
     border: 4px;
     border-style: ridge;
-    border-color: rgb(0, 205, 255);
+    border-color: rgb(13, 13, 14);
+}
+
+.prod-detail {
+    width: 70%;
+    height: 50%;
 }
 
 .card-container
@@ -191,13 +196,10 @@ h5 {
     margin-top: 15%;
 }
 
-.card-body {
+.card-header {
     font-family: 'Chakra Petch', sans-serif;
     font-size: 120%;
-
 }
-
-
 .card-footer {
     background-color: black;
     font-family: 'Chakra Petch', sans-serif;
@@ -236,4 +238,9 @@ h5 {
 .overlay-details {
     margin-top: 10%;
 }
+
+.review {
+    margin-bottom: 5%;
+}
+
 

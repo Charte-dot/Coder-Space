@@ -93,6 +93,8 @@ AUTHENTICATION_BACKENDS = [
 
 SITE_ID = 1
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
