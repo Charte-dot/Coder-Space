@@ -40,51 +40,43 @@
                 {% endif %}
                 <p class="mt-3">{{ product.description }}</p>
             </div>
-        </div>
-        <br>
-        <!-- product review -->
-        <div class="container">
-            <div class="row justify-content-md-left pt-5 ">
-                <div class="col-md-8">
-                    <div class="col-12 comment-panel">
-                        <p>{{comment.body|safe}}</p>
-                </div>
-                    <div class="col-md-10">
-                        {% with comments.count as total_comments %}
-                        <h2>{{ total_comments }} Review{{ total_comments|pluralize }}
-                        </h2>
-                        {% endwith %}
-                        {% for comment in comments %}
-                        Comment {{ for.loopcounter }} by {{ comment.name}}
-                        on {{ comment.created_on }}
-                        {{ comment.body | linebreaks}}
-                        {% empty %}
-                        <p>There are no Reviews for this product yet!</p>
-                        {% endfor %}
-                        <div class="review-alert">
-                            {% if commented %}
-                            <div class="alert alert-success" role="alert">
-                            Your comment is awaiting admin review
+            <hr>
+            <!-- product review -->
+            <div class="container ">
+                <div class="row justify-content-md-left">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="comment-title ">Reviews</h2>
+                            <div class="comment">
+                                {% for review in reviews %}
+                                <div class="comment">
+                                    <p class=""> <span>{{ review.created_on }}</span>
+                                        <span>{{ review.name }} Wrote:</span>
+                                    </p>
+                                    {{ review.body | linebreaks}}
+                                    {% empty %}
+                                    <p>There are no Reviews for this product yet!</p>
+                                </div>
+                                {% endfor %}
                             </div>
-                            {% else %}
-                        {% if user.is_authenticated %}
-                        <h2>Leave a Review</h2>
-                        <form id="myForm" method="post">
-                            {{ comment_form.as_p }}
-                            {% csrf_token %}
-                            <button type="submit" class="btn btn-primary btn-sm ">Submit</button>
-                            {% endif %}
-                            {% endif %}
-                        </form>
+                        </div>
                     </div>
-                    
+                    <hr>
+                    {% if user.is_authenticated %}
+                    <a href="{% url 'add_review' product.id %}"><button type="button"
+                            class="btn btn-black btn-primary">Add review</button></a>
+                    {% else %}
+                    <p>login in to add a review</p>
+                    <div>
+                        <a class="btn btn-black rounded-3" href="{% url 'account_login' %}">Login</a>
+                    </div>
+                    {%endif%}
+
+
                 </div>
             </div>
         </div>
-
-
     </div>
 </div>
-
 
 {% endblock %}

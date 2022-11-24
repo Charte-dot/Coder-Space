@@ -45,10 +45,12 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'django_summernote',
     'home',
     'products',
     'crispy_forms',
     'storages',
+    'reviews'
 ]
 
 MIDDLEWARE = [
@@ -78,6 +80,11 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
+                
+            ]
         },
     },
 ]

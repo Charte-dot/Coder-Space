@@ -36,19 +36,4 @@ class Product(models.Model):
         return self.name
 
 
-class Comment(models.Model):
-    product = models.ForeignKey(
-        Product,
-        on_delete=models.CASCADE,
-        related_name='comments', default="")
-    name = models.CharField(max_length=50)
-    body = models.TextField(blank=False)
-    created_on = models.DateTimeField(auto_now_add=True)
-    approved = models.BooleanField(default=False)
 
-    class Meta:
-        """ Comments ordered from last to first """
-        ordering = ['created_on']
-
-    def __str__(self):
-        return f"Comment {self.body} by {self.name}"

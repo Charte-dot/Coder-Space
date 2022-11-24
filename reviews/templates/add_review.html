@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container-review ml-5 comment-section">
+    <div class="row">
+        <div class="col-6">
+            <h2 class="container-review">Leave a Review</h2>
+            <form id="myForm" method="post">
+                {{ form | crispy }}
+                {% csrf_token %}
+                <div>
+                    <a class="btn btn-primary rounded-3" href="{% url 'products' %}">Cancel</a>
+                    <button class="btn btn-primary rounded-3" type="submit">Add review</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
