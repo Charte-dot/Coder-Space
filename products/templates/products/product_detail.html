@@ -49,14 +49,14 @@
                             <h2 class="comment-title ">Reviews</h2>
                             <div class="comment">
                                 {% for review in reviews %}
-                                <div class="comment">
+                                {% if review.product.id == product.id %}
+                                <div class="comment-text">
                                     <p class=""> <span>{{ review.created_on }}</span>
                                         <span>{{ review.name }} Wrote:</span>
                                     </p>
                                     {{ review.body | linebreaks}}
-                                    {% empty %}
-                                    <p>There are no Reviews for this product yet!</p>
-                                </div>
+                                    </div>
+                                {% endif %}
                                 {% endfor %}
                             </div>
                         </div>
