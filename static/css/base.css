@@ -217,6 +217,7 @@ h5 {
     font-size: 180%;
 }
 
+/* Product Review */
 .review {
     margin-bottom: 5%;
 }
@@ -227,7 +228,13 @@ h5 {
     text-decoration: underline black;
 }
 
+.form-control {
+    background-color:white;
+    color: black;
+}
 
+
+/* Buttons */
 .btn-primary {
     background-color: black;
     font-family: 'Chakra Petch', sans-serif;
@@ -240,21 +247,21 @@ h5 {
     color: black;
 }
 
-.form-control {
-    background-color:white;
-    color: black;
-}
-
+/* Account access */
 .container-login {
     margin-top: 5%;
 }
 
-.container-confirm {
-    margin-top: 200%;
-    font-family: 'Chakra Petch', sans-serif;
-    color: rgb(7, 7, 7);
-}
-
 .message {
     margin-top: 20%;
+}
+
+/* Shopping bag */
+.table-title {
+font-size: 120% ;
+text-decoration: underline black;
+}
+
+.table-products {
+    font-size: 120%;
 }
