@@ -55,9 +55,10 @@ body {
 }
 
 .navbar {
-    position: relative;
+    position: absolute;
     background-color: black;
     box-shadow: 0px 25px 20px -20px rgba(0, 205, 255);
+    z-index: 999;
     }
     
 .fa-bars {
@@ -260,8 +261,7 @@ h5 {
 .table-title {
 font-size: 120% ;
 text-decoration: underline black;
+z-index: -1;
 }
 
-.table-products {
-    font-size: 120%;
-}
+
