@@ -243,6 +243,11 @@ h5 {
     margin-bottom: 10%;
 }
 
+.fa-trash:hover {
+    color: red;
+
+}
+
 .btn-primary:hover {
     background-color:rgb(0, 205, 255) ;
     color: black;
@@ -255,13 +260,6 @@ h5 {
 
 .message {
     margin-top: 20%;
-}
-
-/* Shopping bag */
-.table-title {
-font-size: 120% ;
-text-decoration: underline black;
-z-index: -1;
 }
 
 
