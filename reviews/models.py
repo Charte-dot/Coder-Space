@@ -8,7 +8,7 @@ class Reviews(models.Model):
         Product,
         on_delete=models.CASCADE,
         related_name='reviews')
-    name = models.CharField(max_length=50)
+    name = models.CharField(max_length=50, blank=False)
     body = models.TextField(blank=False)
     created_on = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
