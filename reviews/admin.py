@@ -3,7 +3,7 @@ from .models import Reviews
 
 
 class ReviewAdmin(admin.ModelAdmin):
-    list_display = ('name', 'body', 'created_on', 'approved', 'product')
+    list_display = ('posted_by',  'body', 'created_on', 'approved', 'product')
     actions = ['approve_review']
 
 

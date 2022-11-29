@@ -94,7 +94,7 @@
                                 {% if review.product.id == product.id %}
                                 <div class="comment-text">
                                     <p class=""> <span>{{ review.created_on }}</span>
-                                        <span>{{ review.name }} Wrote:</span>
+                                        <span>{{ review.posted_by }} Wrote:</span>
                                     </p>
                                     {{ review.body | linebreaks}}
                                 </div>
@@ -104,29 +104,29 @@
                         </div>
                         <hr>
                     {% if user.is_authenticated %}
-                    <a href="{% url 'add_review' product.id %}"><button type="button"
-                            class="btn btn-black btn-primary">Add review</button></a>
-                    {% else %}
-                    <div class="row comment-text">
-                        <p class="text-center ml-4">Login in to add a review</p>
-                        <div class="col-6 ml-3 mt-2">
-                            <a class="btn btn-primary justify-content-md-right"
-                                href="{% url 'account_login' %}">Login</a>
+                                <a href="{% url 'add_review' product.id %}"><button type="button"
+                                        class="btn btn-black btn-primary">Add review</button></a>
+                                {% else %}
+                                <div class="row comment-text">
+                                    <p class="text-center ml-4">Login in to add a review</p>
+                                    <div class="col-6 ml-3 mt-2">
+                                        <a class="btn btn-primary justify-content-md-right"
+                                            href="{% url 'account_login' %}">Login</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                        {% endif %}
+
+
                     </div>
                 </div>
             </div>
-                {%endif%}
-
-
-            </div>
         </div>
     </div>
-</div>
-</div>
-{% endblock %}
+    {% endblock %}
 
-{% block postloadjs %}
-{{ block.super }}
-{% include 'products/includes/quantity_input_script.html' %}
-{% endblock %}
+    {% block postloadjs %}
+    {{ block.super }}
+    {% include 'products/includes/quantity_input_script.html' %}
+    {% endblock %}
