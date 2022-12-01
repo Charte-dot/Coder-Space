@@ -22,6 +22,7 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    
 }
 
 
@@ -169,7 +170,8 @@ h5 {
 }
 
 /* Product detail Page */
-.overlay-products {
+.overlay-products,
+.overlay {
     margin-top: 5%;
     height: 100%;
     width: 100%;

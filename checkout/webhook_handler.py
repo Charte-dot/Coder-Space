@@ -67,6 +67,7 @@ class StripeWH_Handler:
         if username != 'AnonymousUser':
             profile = UserProfile.objects.get(user__username=username)
             if save_info:
+                profile.default_full_name = shipping_details.name
                 profile.default_phone_number = shipping_details.phone
                 profile.default_country = shipping_details.address.country
                 profile.default_postcode = shipping_details.address.postal_code
@@ -81,7 +82,7 @@ class StripeWH_Handler:
         while attempt <= 5:
             try:
                 order = Order.objects.get(
-                    full_name__iexact=shipping_details.name,
+                    name__iexact=shipping_details.full_name,
                     email__iexact=billing_details.email,
                     phone_number__iexact=shipping_details.phone,
                     street_address1__iexact=shipping_details.address.line1,
@@ -102,14 +103,14 @@ class StripeWH_Handler:
         if order_exists:
             self._send_confirmation_email(order)
             return HttpResponse(
-                content=(f'Webhook received: {event["type"]} | SUCCESS: '
-                         'Verified order already in database'),
+                content=f'Webhook received: {event["type"]} \
+                | SUCCESS: Verified order already in database',
                 status=200)
         else:
             order = None
             try:
                 order = Order.objects.create(
-                    full_name=shipping_details.name,
+                    name=shipping_details.full_name,
                     user_profile=profile,
                     email=billing_details.email,
                     phone_number=shipping_details.phone,
@@ -131,15 +132,7 @@ class StripeWH_Handler:
                             quantity=item_data,
                         )
                         order_line_item.save()
-                    else:
-                        for size, quantity in item_data['items_by_size'].items():  # noqa
-                            order_line_item = OrderLineItem(
-                                order=order,
-                                product=product,
-                                quantity=quantity,
-                                product_size=size,
-                            )
-                            order_line_item.save()
+
             except Exception as e:
                 if order:
                     order.delete()
@@ -148,7 +141,8 @@ class StripeWH_Handler:
                     status=500)
         self._send_confirmation_email(order)
         return HttpResponse(
-            content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',  # noqa
+            content=f'Webhook received: {event["type"]} \
+            | SUCCESS: Created order in webhook',
             status=200)
 
     def handle_payment_intent_payment_failed(self, event):
