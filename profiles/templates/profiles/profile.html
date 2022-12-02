@@ -70,15 +70,9 @@
             </div>
         </div>
     </div>
+{% endblock %}
 
-    <div class="row">
-        <div class="col-6 text-center mb-5"></div>
-        <h2>My reviews</h2>
-    </div>
-
-    {% endblock %}
-
-    {% block postloadjs %}
-    {{ block.super }}
-    <script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
-    {% endblock %}
+        {% block postloadjs %}
+        {{ block.super }}
+        <script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
+        {% endblock %}

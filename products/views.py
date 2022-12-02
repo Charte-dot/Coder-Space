@@ -4,6 +4,7 @@ from django.db.models import Q
 from reviews.models import Reviews
 from .models import Product, Category
 from django.contrib import messages
+from .forms import ProductForm
 
 
 def all_products(request):
@@ -51,3 +52,13 @@ def product_detail(request, product_id):
 
     return render(
         request, 'products/product_detail.html', context)
+
+
+def add_product(request):
+    """ Add a product to the store """
+    form = ProductForm()
+    context = {
+        'form': form,
+    }
+
+    return render(request, 'products/add_product.html', context)
