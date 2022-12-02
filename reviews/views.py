@@ -25,8 +25,8 @@ def add_review(request, product_id):
             form.instance.posted_by = request.user
             form.instance.product = product
             form.save()
-            messages.success(request, 'review Added')
-            return redirect(reverse('products',))
+            messages.success(request, 'Successfully added Review!')
+            return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(
                 request,
