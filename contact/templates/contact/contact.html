@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <hr>
+    <div class="row text-center pt-4 mb-4">
+        <div class="col">
+            <h1 class="title-font display-colour mt-3">Contact Form</h1>
+        </div>
+    </div>
+    <hr>
+    <div class="row text-center pt-4 mb-1">
+        <div class="col">
+            <p>Fill in this form to send us a message.</p>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-10 col-lg-8 form-border-style">
+            <form method="post">
+                {% csrf_token %}
+                {{ form | crispy }}
+                <input type="submit" value="Send" class="btn btn-primary mb-2">
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}
