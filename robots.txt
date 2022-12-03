@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /bag/
+Sitemap: https://coder-space.herokuapp.com/sitemap.xml

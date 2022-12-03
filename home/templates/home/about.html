@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+{% endblock %}
+
+{% block content  %}
+<div class="container-fluid col-md-4 mb-3 pt-4 about">
+    <div class="row">
+        <div class="col">
+            <img src="{{ MEDIA_URL }}logo.png" alt="blue-robot" class="w-100">
+        </div>
+        <div class="row">
+            <div class="col-12 mt-4">
+                <h1 class="text-center">About us</h1>
+                <p>
+                    Here at coder space we aim to help you make your coding or office space a truly unique place,
+                    to help inspire and create a posivtive work environment.
+                    From comfortable sytlish chairs, spacious ergonomic desks to extra computer screens and decor
+                    to liven up your work space.
+                    Enjoy browsing our large range and if you have any queries or need a product that isn't on our site,
+                    please use our contact form and we will get back to you as soon as possible.
+                    
+                    <p>Coder Space Admin Team <i class="fas fa-robot"></i></p>
+                </p>
+                <a href="{% url 'products' %}" class="btn btn-sm btn-primary title-font">Contact Us >>></a>
+
+                <a href="{% url 'products' %}" class="btn btn-sm btn-primary title-font ml-5">Shop Now >>></a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
