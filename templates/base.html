@@ -46,10 +46,9 @@
 
     <title>Coder Space {% block extra_title %}{% endblock %}</title>
 </head>
-
-<body>
-    <header class="container-fluid">
-        <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
+<header>
+    <div class="container-fluid-nav">
+        <nav class="row navbar navbar-expand-lg pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a class="navbar-brand" href="{% url 'home' %}">
                     <img src="{% static 'images/logo.png' %}" alt="blue robot" class="logo-img" width="250" height="70">
@@ -110,41 +109,45 @@
                     </li>
                 </ul>
             </div>
+    </div>
+
+    <div class="row">
+        <nav class="navbar navbar-expand-lg w-100">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
+                aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+            </button>
+            {% include 'includes/mobile-top-header.html' %}
+            {% include 'includes/main-nav.html' %}
+        </nav>
+    </div>
+    <div id="delivery-banner" class="row text-center">
+        <div class="col bg-black text-white">
+            <h4 class="logo-font my-1 mt-4">Free delivery on orders over €{{ free_delivery_threshold }}!</h4>
         </div>
-        <div class="row">
-            <nav class="navbar navbar-expand-lg w-100">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
-                    aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
-                </button>
-                {% include 'includes/mobile-top-header.html' %}
-                {% include 'includes/main-nav.html' %}
-            </nav>
-        </div>
-        <div id="delivery-banner" class="row text-center mt-5">
-            <div class="col bg-black text-white">
-                <h4 class="logo-font my-1 mt-4">Free delivery on orders over €{{ free_delivery_threshold }}!</h4>
-            </div>
-        </div>
-    </header>
+    </div>
+</header>
+
+<body>
+
 
     {% if messages %}
     <div class="message-container">
         {% for message in messages %}
-            {% with message.level as level %}
-                {% if level == 40 %}
-                    {% include 'includes/toasts/toast_error.html' %}
-                {% elif level == 30 %}
-                    {% include 'includes/toasts/toast_warning.html' %}
-                {% elif level == 25 %}
-                    {% include 'includes/toasts/toast_success.html' %}
-                {% else %}
-                    {% include 'includes/toasts/toast_info.html' %}
-                {% endif %}
-            {% endwith %}
+        {% with message.level as level %}
+        {% if level == 40 %}
+        {% include 'includes/toasts/toast_error.html' %}
+        {% elif level == 30 %}
+        {% include 'includes/toasts/toast_warning.html' %}
+        {% elif level == 25 %}
+        {% include 'includes/toasts/toast_success.html' %}
+        {% else %}
+        {% include 'includes/toasts/toast_info.html' %}
+        {% endif %}
+        {% endwith %}
         {% endfor %}
     </div>
-{% endif %}
+    {% endif %}
 
 
     {% block page_header %}
@@ -159,79 +162,67 @@
     </script>
     {% endblock %}
 
-
-
-    <!--Footer-->
-    <footer id="footer" class="footer-1 page-footer">
-        <div class="main-footer widgets-dark typo-light">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <div class="widget no-box">
-                            <h5 class="widget-title">Quick Links</h5>
-                            <ul class="thumbnail-widget list-inline list-unstyled">
-                                <li>
-                                    <a href="{% url 'home' %}" class="footer-link">Home</a>
-                                </li>
-                                <li>
-                                    <a href="{% url 'about' %}" class="footer-link">About</a>
-                                </li>
-                                <li>
-                                    <a href="{% url 'contact' %}" class="footer-link">Contact</a>
-                                </li>
-                                <li>
-                                    <a href="{% url 'privacy' %}" class="footer-link">Privacy Policy</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-6 col-md-3">
-                        <div class="widget no-box">
-                            <h5 class="widget-title">Subscribe<span></span></h5>
-                            <p class="footer-link">Sign up to our mailing list</p>
-                            <a class="btn-secondary" href="#">Subscribe Now</a>
-                        </div>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-6 col-md-3">
-                        <div class="widget no-box">
-                            <h5 class="widget-title social-links">Contact Us<span></span></h5>
-                            <ul class="social-footer2 list-unstyled">
-                                <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Visit our Facebook page 
-                                (opens in a new tab)" title="Facebook">
-                                        <i class="fab fa-facebook-square mx-1 social-links"></i></a>
-                                </li>
-                                <li><a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Visit our Twitter page 
-                                    (opens in a new tab)" title="Twitter">
-                                        <i class="fab fa-twitter-square mx-1 social-links"></i></a>
-                                </li>
-                                <li><a title="instagram" target="_blank" rel="noopener" aria-label="Visit our Instagram page 
-                                    (opens in a new tab)" href="https://www.instagram.com/">
-                                        <i class="fab fa-instagram-square mx-1 social-links"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="footer-copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <p>© 2022 Copyright:
-                            <a href="https://github.com/Charte-dot" target="_blank" rel="noopener" aria-label="Caroline Harte's Github repo
-                                (opens in a new tab)" class="footer-menu"><span
-                                    class="title-font display-colour">Charte</span>
-                            </a></p>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <div class="mt-4">
+                        <h5 class="footer-mb-3">Quick Links</h5>
+                        <ul class="list-unstyled text-muted">
+                            <li>
+                                <a href="{% url 'home' %}" class="footer-link">Home</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'about' %}" class="footer-link">About</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'contact' %}" class="footer-link">Contact Us</a>
+                            </li>
+                            <li>
+                                <a href="https://www.privacypolicygenerator.info/live.php?token=WGMqQK9vmPgIx2LPPPY4Bmg9gHJl9FGJ"
+                                    target="_blank" rel="noopener" aria-label="privacy policy 
+                                        (opens in a new tab)" title="Privacy" class="footer-link">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <p class="text-muted mb-0">&copy; Copyrights. Charte 2022</p>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            </div>
-        </div>
+                <div class="col-3 mt-4">
+                    <div>
+                        <form enctype="multipart/form-data" method="POST" action="" style="text-align: center;">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label>Subscribe to our Newsletter.</label>
+                                <input type="email" class="form-control" id="userEmail" placeholder="Enter email" required>
+                                <small style="font-weight: 600;color: red;" class="error"></small>
+                            </div>
+                            <input type="submit" value="Subscribe" id="submit" class="btn btn-primary">     
+                        </form>
+                    </div>
+                <div class="col-4 text-right mt-4">
+                    <div>
+                        <h5 class="footer-mb-3">Social</h5>
+                        <ul class="list-unstyled text-muted">
+                            <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Visit our Facebook page 
+                            (opens in a new tab)" title="Facebook">
+                                    <i class="fab fa-facebook-square mx-1 social-links"></i></a>
+                            </li>
+                            <li><a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Visit our Twitter page 
+                                (opens in a new tab)" title="Twitter">
+                                    <i class="fab fa-twitter-square mx-1 social-links"></i></a>
+                            </li>
+                            <li><a title="instagram" target="_blank" rel="noopener" aria-label="Visit our Instagram page 
+                                (opens in a new tab)" href="https://www.instagram.com/">
+                                    <i class="fab fa-instagram-square mx-1 social-links"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
     </footer>
+
 </body>
 
 </html>

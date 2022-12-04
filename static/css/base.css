@@ -1,6 +1,8 @@
 html {
     height: 100%;
     overflow-x: hidden;
+
+
 }
 
 /* Body */
@@ -22,7 +24,7 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-
+    overflow-y: hidden !important;
 }
 
 
@@ -50,13 +52,7 @@ body {
 }
 
 /* Nav Bar */
-#topnav {
-    background-color: black;
-    box-shadow: 0px 25px 20px -20px rgba(0, 205, 255);
-}
-
 .navbar {
-    position: absolute;
     background-color: black;
     box-shadow: 0px 25px 20px -20px rgba(0, 205, 255);
     z-index: 999;
@@ -120,11 +116,9 @@ body {
 
 /* Footer */
 footer {
-    position: absolute;
+    position: relative;
     padding-right: 0px;
-    margin-bottom: 10px;
     box-shadow: 5px 5px 5px 5px rgba(0, 205, 255);
-    height: 30%;
     width: 100vw;
     background-color: black;
     color: rgb(0, 205, 255);
@@ -133,21 +127,22 @@ footer {
     box-shadow: 0px 5px 15px rgba(0, 205, 255);
 }
 
-h5 {
-    margin-top: 5%;
+.footer-mb-3 {
     font-size: 170%;
     text-decoration: underline;
 }
-
+.footer-title {
+    font-size: 170%;
+    font-family: 'Chakra Petch', sans-serif;
+    color: rgb(0, 205, 255);
+}
 .footer-menu {
-    margin-top: 5%;
     font-family: 'Chakra Petch', sans-serif;
     color: rgb(0, 205, 255);
     font-size: 140%;
 }
 
 .footer-link {
-
     font-family: 'Chakra Petch', sans-serif;
     color: rgb(0, 205, 255);
     font-size: 120%;
@@ -165,7 +160,7 @@ h5 {
     color: white;
 }
 
-.login,
+*/ .login,
 .logout {
     margin-top: 20%;
 }
@@ -334,5 +329,4 @@ h5 {
 .about {
     font-size: 110%;
 }
-
 
