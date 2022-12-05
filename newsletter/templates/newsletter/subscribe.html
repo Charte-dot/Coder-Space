@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content  %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-lg-6  sub-form">
+            <h3 class="sub-form-head">Sign up for Coder Space Newsletter</h3>
+            <p class="sub-form-text">For discount codes, new release previews before they go live on the site.</p>
+            <p class="sub-form-text">First look for our subscribed customers on our yearly sales events.</p>
+            <form class="mt-2" action="{% url 'subscribe' %}" method="POST" id="newsletter-subscription">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button class="btn btn-primary">Subscribe</button>
+                </form>
+                <a href="{% url 'home' %}"><button class="btn btn-primary">Return Home</button></a>
+        </div>
+    </div>
+</div>
+
+{% endblock %} 

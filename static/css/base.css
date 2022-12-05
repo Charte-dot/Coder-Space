@@ -151,7 +151,7 @@ footer {
 .social-links {
     font-family: 'Chakra Petch', sans-serif;
     color: rgb(0, 205, 255);
-    font-size: 150%;
+    font-size: 180%;
 }
 
 .social-links:hover,
@@ -330,3 +330,23 @@ footer {
     font-size: 110%;
 }
 
+.profile-form {
+    margin-bottom: 30%;
+}
+
+/*Newsletter*/
+.sub-form{
+    margin-top: 2%;
+    margin-bottom: 20%;
+}
+
+.sub-form-head {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 180%;
+    text-decoration: underline black;
+}
+
+.sub-form-text {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 140%;
+}
