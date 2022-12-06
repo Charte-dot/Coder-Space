@@ -41,4 +41,3 @@ def add_review(request, product_id):
     }
 
     return render(request, template, context)
-

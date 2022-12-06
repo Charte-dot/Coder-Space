@@ -102,6 +102,7 @@ body {
 
 .basket-label,
 .basket-icon {
+    align-items: flex-end;
     font-size: 90%;
 }
 
@@ -117,7 +118,7 @@ body {
 /* Footer */
 footer {
     position: relative;
-    padding-right: 0px;
+    padding: 0px;
     box-shadow: 5px 5px 5px 5px rgba(0, 205, 255);
     width: 100vw;
     background-color: black;
@@ -130,7 +131,9 @@ footer {
 .footer-mb-3 {
     font-size: 170%;
     text-decoration: underline;
+    
 }
+
 .footer-title {
     font-size: 170%;
     font-family: 'Chakra Petch', sans-serif;
@@ -330,8 +333,9 @@ footer {
     font-size: 110%;
 }
 
-.profile-form {
-    margin-bottom: 30%;
+.profile-form,
+.container-review {
+    margin-bottom: 10%;
 }
 
 /*Newsletter*/
@@ -348,5 +352,5 @@ footer {
 
 .sub-form-text {
     font-family: 'Chakra Petch', sans-serif;
-    font-size: 140%;
+    font-size: 120%;
 }

@@ -9,6 +9,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description"
+    content="E-commerce store selling chairs, desks, computer equipment and decor, personalized coding and office space">
+    <meta name="keywords"
+    content="buy, chairs, desks, lights, computers, wall decor, cups, mouse mats, screens, keyboards, speakers, headsets, colourful, ">
     {% endblock %}
 
     {% block extra_meta %}
@@ -22,6 +26,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&family=Rokkitt&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'favicon/favicon.ico' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
+    <link rel="manifest" href="/site.webmanifest">
     {% endblock %}
 
     {% block extra_css %}
@@ -69,8 +78,7 @@
                     </div>
                 </form>
             </div>
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-
+            <div class="col-12 ml-5">
                 <div class="list-inline-item">
                     <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
                         href="{% url 'view_bag' %}">
@@ -142,9 +150,9 @@
 
     <!--Footer-->
     <footer>
-        <div class="container">
+        <div class="container fluid">
             <div class="row">
-                <div class="col mt-2">
+                <div class="col-4 mt-2">
                     <h5 class="footer-mb-3">Quick Links</h5>
                     <ul class="list-unstyled text-muted">
                         <li>
@@ -166,13 +174,12 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col mt-2 text-center">
-                    <h4>Subscribe to our newsletter</h4>
-                    <h5>For discount codes and new releases</h5>
+                <div class="col-4 mt-2 ml-auto">
+                    <h5>Subscribe to our newsletter</h4>
                     <a href="{% url 'subscribe' %}" class="btn btn-primary ml-5">Subscribe</a>
                 </div>
 
-                <div class="col mt-2">
+                <div class="col-4 mt-2">
                     <h5 class="footer-mb-3">Find Us</h5>
                     <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Visit our Facebook page 
                 (opens in a new tab)" title="Facebook">

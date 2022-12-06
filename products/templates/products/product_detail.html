@@ -12,7 +12,7 @@
 
 {% block content %}
 <div class="overlay-details"></div>
-<div class="container-fluid mt-1">
+<div class="container-fluid">
     <div class="row">
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
             <div class="image-container my-5">
@@ -40,10 +40,10 @@
                 {% endif %}
                 {% if request.user.is_superuser %}
                 <small class="ml-3">
-                    <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                    <a href="{% url 'edit_product' product.id %}">Edit</a> |
                     <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
                 </small>
-            {% endif %}
+                {% endif %}
                 <p class="mt-3">{{ product.description }}</p>
                 <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                     {% csrf_token %}
@@ -90,7 +90,7 @@
             </div>
             <hr>
             <!-- product review -->
-            <div class="container ">
+            <div class="container-review ">
                 <div class="row justify-content-md-left">
                     <div class="row">
                         <div class="col-12">
@@ -109,28 +109,28 @@
                             </div>
                         </div>
                         <hr>
-                    {% if user.is_authenticated %}
-                                <a href="{% url 'add_review' product.id %}"><button type="button"
-                                        class="btn btn-black btn-primary">Add review</button></a>
-                                {% else %}
-                                <div class="row comment-text">
-                                    <p class="text-center ml-4">Login in to add a review</p>
-                                    <div class="col-6 ml-3 mt-2">
-                                        <a class="btn btn-primary justify-content-md-right"
-                                            href="{% url 'account_login' %}">Login</a>
-                                    </div>
-                                </div>
+                        {% if user.is_authenticated %}
+                        <a href="{% url 'add_review' product.id %}"><button type="button"
+                                class="btn btn-black btn-primary mt-4">Add review</button></a>
+                        {% else %}
+                        <div class="row comment-text">
+                            <p class="text-center ml-4">Login in to add a review</p>
+                            <div class="col-6 ml-3 mt-2">
+                                <a class="btn btn-primary justify-content-md-right"
+                                    href="{% url 'account_login' %}">Login</a>
                             </div>
                         </div>
-                        {% endif %}
-
-
                     </div>
                 </div>
+                {% endif %}
+
+
             </div>
         </div>
     </div>
-    {% endblock %}
+</div>
+
+{% endblock %}
 
 {% block postloadjs %}
 {{ block.super }}
