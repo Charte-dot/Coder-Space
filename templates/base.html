@@ -30,7 +30,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}">
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="manifest" href="/site.webmanifest" crossorigin="use-credentials">
     {% endblock %}
 
     {% block extra_css %}
@@ -176,7 +176,7 @@
                 </div>
                 <div class="col-4 mt-2 ml-auto">
                     <h5>Subscribe to our newsletter</h4>
-                    <a href="{% url 'subscribe' %}" class="btn btn-primary ml-5">Subscribe</a>
+                    <a href="{% url 'subscribe' %}" class="btn btn-sm btn-primary ml-5">Subscribe</a>
                 </div>
 
                 <div class="col-4 mt-2">
