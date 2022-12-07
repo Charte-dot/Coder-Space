@@ -42,11 +42,21 @@ def NewsletterUnsub(request):
         instance = form.save(commit=False)
         if NewsletterUser.objects.filter(email=instance.email).exists():
             NewsletterUser.objects.filter(email=instance.email).delete()
-            messages.success(request, 'You have unsubscribed successfully')
-        else:
             messages.error(
                 request, 'Update failed. Please ensure the email is valid.')
+        else:
             instance.save()
+            messages.success(request, 'You have unsubscribed successfully')
+            subject = "You have Unsubscribed from Coder Space Newsletter"
+            from_email = settings.EMAIL_HOST_USER
+            to_email = [instance.email]
+            sign_up_message = """We are sorry to see you go, if there is an
+            issue with our site please contact us"""
+            send_mail(
+                subject=subject,
+                from_email=from_email,
+                recipient_list=to_email,
+                message=sign_up_message, fail_silently=True)
 
     context = {
         'form': form,
