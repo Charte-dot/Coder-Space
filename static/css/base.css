@@ -125,6 +125,7 @@ footer {
     padding: 0px;
     box-shadow: 5px 5px 5px 5px rgba(0, 205, 255);
     width: 100vw;
+    height: 250px;
     background-color: black;
     color: rgb(0, 205, 255);
     font-family: 'Chakra Petch', sans-serif;
@@ -185,9 +186,6 @@ footer {
     z-index: -1;
 }
 
-.header-container {
-padding-top: 130px;
-}
 
 .card {
     border: 4px;
@@ -272,7 +270,12 @@ padding-top: 130px;
 
 /* Account access */
 .container-login {
-    margin-top: 20%;
+    margin-top: 15%;
+}
+
+.container-email {
+    margin-top: 25%;
+    
 }
 
 .email {
