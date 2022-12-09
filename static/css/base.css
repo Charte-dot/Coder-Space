@@ -243,6 +243,14 @@ padding-top: 130px;
     color: black;
 }
 
+.container-about {
+    display: inline-block;
+    margin-top: 20%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 20%;
+}
+
 
 /* Buttons */
 .btn-primary {
@@ -436,6 +444,9 @@ padding-top: 130px;
 .signout {
     margin-bottom: 20%;
 }
+.container-about {
+    margin-top: 25%;
+}
 }
 
 @media screen and (max-width: 487px) {
@@ -446,10 +457,13 @@ padding-top: 130px;
     .signout {
         margin-bottom: 20%;
     }
+    .container-about {
+        margin-top: 30%;
+    }
     
 }
 
-@media screen and (max-width: 487px) {
+@media screen and (max-width: 420px) {
     .container-login {
         margin-top: 50%;
         text-align: center;
@@ -460,4 +474,42 @@ padding-top: 130px;
         margin-bottom: 20%;
         
     }
+
+.container-about {
+    margin-top: 40%;
 }
+}
+
+@media screen and (max-width: 420px) {
+    .container-login {
+        margin-top: 50%;
+        text-align: center;
+        margin-right: 10%;
+
+    }
+    .signout {
+        margin-bottom: 20%;
+        
+    }
+    .container-about {
+        margin-top: 40%;
+    }
+    
+}
+
+@media screen and (max-width: 387px) {
+    .container-login {
+        margin-top: 50%;
+        text-align: center;
+        margin-right: 10%;
+
+    }
+    .signout {
+        margin-bottom: 20%;
+        
+    }
+    .container-about {
+        margin-top: 50%;
+    }
+    }
+
