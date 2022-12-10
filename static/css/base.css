@@ -1,8 +1,6 @@
 html {
     height: 100%;
     overflow-x: hidden;
-
-
 }
 
 /* Body */
@@ -10,8 +8,10 @@ body {
     padding: 0;
     margin: 0;
     font-family: 'Chakra Petch', sans-serif;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
-
 
 .hero {
     width: 100vw;
@@ -25,7 +25,6 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    
 }
 
 
@@ -44,8 +43,6 @@ body {
     border-radius: 15px;
     background-color: rgba(0, 0, 0, 0.8);
     box-shadow: 0px 2px 5px rgb(0, 205, 255);
-
-
 }
 
 .hero .btn:hover {
@@ -53,8 +50,6 @@ body {
 }
 
 /* Nav Bar */
-
-
 .navbar,
 .top {
     background-color: black;
@@ -90,13 +85,11 @@ body {
 }
 
 .dropdown-item,
-.dropdown-menu
-{
+.dropdown-menu {
     background-color: black;
     color: rgb(0, 205, 255);
     font-family: 'Chakra Petch', sans-serif;
     z-index: 9999999;
-
 }
 
 .dropdown-item:hover {
@@ -121,11 +114,10 @@ body {
 
 /* Footer */
 footer {
-    position: relative;
-    padding: 0px;
+    margin-top: auto;
+    padding: 0;
     box-shadow: 5px 5px 5px 5px rgba(0, 205, 255);
     width: 100vw;
-    height: 250px;
     background-color: black;
     color: rgb(0, 205, 255);
     font-family: 'Chakra Petch', sans-serif;
@@ -136,7 +128,7 @@ footer {
 .footer-mb-3 {
     font-size: 170%;
     text-decoration: underline;
-    
+
 }
 
 .footer-title {
@@ -144,6 +136,7 @@ footer {
     font-family: 'Chakra Petch', sans-serif;
     color: rgb(0, 205, 255);
 }
+
 .footer-menu {
     font-family: 'Chakra Petch', sans-serif;
     color: rgb(0, 205, 255);
@@ -168,10 +161,6 @@ footer {
     color: white;
 }
 
-.login,
-.logout {
-    margin-top: 20%;
-}
 
 /* Product detail Page */
 .overlay-products,
@@ -231,7 +220,7 @@ footer {
 }
 
 .comment-title {
-    font-family: 'Chakra Petch', sans-serif; 
+    font-family: 'Chakra Petch', sans-serif;
     font-size: 150%;
     text-decoration: underline black;
 }
@@ -240,15 +229,6 @@ footer {
     background-color: white;
     color: black;
 }
-
-.container-about {
-    display: inline-block;
-    margin-top: 20%;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-bottom: 20%;
-}
-
 
 /* Buttons */
 .btn-primary {
@@ -268,19 +248,6 @@ footer {
     color: black;
 }
 
-/* Account access */
-.container-login {
-    margin-top: 15%;
-}
-
-.container-email {
-    margin-top: 25%;
-    
-}
-
-.email {
-    margin-bottom: 20%;
-}
 
 /* message container */
 .message-container {
@@ -352,13 +319,12 @@ footer {
     font-size: 110%;
 }
 
-.profile-form,
 .container-review {
     margin-bottom: 10%;
 }
 
 /*Newsletter*/
-.sub-form{
+.sub-form {
     margin-top: 2%;
     margin-bottom: 20%;
 }
@@ -374,11 +340,14 @@ footer {
     font-size: 120%;
 }
 
+
 /* Allauth form formatting */
 
 .allauth-form-inner-content p {
-    margin-top: 1.5rem; /* mt-4 */
-    color: #6c757d; /* text-secondary */
+    margin-top: 1.5rem;
+    /* mt-4 */
+    color: #6c757d;
+    /* text-secondary */
 }
 
 .allauth-form-inner-content input {
@@ -396,8 +365,8 @@ footer {
 
 .allauth-form-inner-content button,
 .allauth-form-inner-content input[type='submit'] {
-	/* btn */
-	display: inline-block;
+    /* btn */
+    display: inline-block;
     font-weight: 400;
     color: #fff;
     text-align: center;
@@ -414,105 +383,22 @@ footer {
     border-radius: 0;
 
     /* standard bootstrap btn transitions */
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 .allauth-form-inner-content button:hover,
-.allauth-form-inner-content input[type='submit']:hover {	
-	color: #fff;
+.allauth-form-inner-content input[type='submit']:hover {
+    color: #fff;
     background-color: #222;
     border-color: #222;
 }
 
 .allauth-form-inner-content a {
-	color: #17a2b8; /* text-info */
+    color: #17a2b8;
+    /* text-info */
 }
 
-
-/* Media Queries */
-@media screen and (max-width: 869px)  {
-    .signout {
-        margin-bottom: 30%;
-    }
-    }
-
-
-@media screen and (max-width: 600px) {
-.hero .btn {
-    margin-left: 20%;
+.form-auth {
+    width: 40%;
+    margin-left: 25%;
 }
-.container-login {
-    margin-top: 25%;
-}
-.signout {
-    margin-bottom: 20%;
-}
-.container-about {
-    margin-top: 25%;
-}
-}
-
-@media screen and (max-width: 487px) {
-    .container-login {
-        margin-top: 40%;
-
-    }
-    .signout {
-        margin-bottom: 20%;
-    }
-    .container-about {
-        margin-top: 30%;
-    }
-    
-}
-
-@media screen and (max-width: 420px) {
-    .container-login {
-        margin-top: 50%;
-        text-align: center;
-        margin-right: 10%;
-
-    }
-    .signout {
-        margin-bottom: 20%;
-        
-    }
-
-.container-about {
-    margin-top: 40%;
-}
-}
-
-@media screen and (max-width: 420px) {
-    .container-login {
-        margin-top: 50%;
-        text-align: center;
-        margin-right: 10%;
-
-    }
-    .signout {
-        margin-bottom: 20%;
-        
-    }
-    .container-about {
-        margin-top: 40%;
-    }
-    
-}
-
-@media screen and (max-width: 387px) {
-    .container-login {
-        margin-top: 50%;
-        text-align: center;
-        margin-right: 10%;
-
-    }
-    .signout {
-        margin-bottom: 20%;
-        
-    }
-    .container-about {
-        margin-top: 50%;
-    }
-    }
-

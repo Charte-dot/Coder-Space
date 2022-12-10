@@ -29,8 +29,6 @@ class Product(models.Model):
     rating = models.DecimalField(
         max_digits=6, decimal_places=2, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
-    rate = models.ManyToManyField(
-        User, related_name='product_rate', blank=True)
 
     def __str__(self):
         return self.name
