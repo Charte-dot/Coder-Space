@@ -10,22 +10,22 @@
             </div>
         </li>
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link mr-5" href="#" id="product-link" data-toggle="dropdown"
+            <a class="logo-font font-weight-bold nav-link mr-5" href="#" id="furniture-link" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 Furniture
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="product-link">
+            <div class="dropdown-menu border-0" aria-labelledby="furniture-link">
                 <a href="{% url 'products' %}?category=chairs" class="dropdown-item">Chairs</a>
                 <a href="{% url 'products' %}?category=desks" class="dropdown-item">Desks</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link mr-5" href="#" id="product-link" data-toggle="dropdown"
+            <a class="logo-font font-weight-bold nav-link mr-5" href="#" id="computer-link" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 Computers
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="product-link">
+            <div class="dropdown-menu border-0" aria-labelledby="computer-link">
                 <a href="{% url 'products' %}?category=computer_laptops" class="dropdown-item">Computers & Laptops</a>
                 <a href="{% url 'products' %}?category=screens" class="dropdown-item">Screens</a>
                 <a href="{% url 'products' %}?category=mouse" class="dropdown-item">Mouse</a>
@@ -34,33 +34,33 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link mr-5" href="#" id="product-link" data-toggle="dropdown"
+            <a class="logo-font font-weight-bold nav-link mr-5" href="#" id="sound-link" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 Sound
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="product-link">
+            <div class="dropdown-menu border-0" aria-labelledby="sound-drop">
                 <a href="{% url 'products' %}?category=headsets" class="dropdown-item">Headphones</a>
                 <a href="{% url 'products' %}?category=speakers" class="dropdown-item">Speakers</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link mr-5" href="#" id="product-link" data-toggle="dropdown"
+            <a class="logo-font font-weight-bold nav-link mr-5" href="#" id="room-link" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 Room Decor
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="product-link">
+            <div class="dropdown-menu border-0" aria-labelledby="room-link">
                 <a href="{% url 'products' %}?category=lights" class="dropdown-item">Lights</a>
                 <a href="{% url 'products' %}?category=wall_art" class="dropdown-item">Wall Art</a>
                 <a href="{% url 'products' %}?category=accessories" class="dropdown-item">Accessories</a>
             </div>
         </li>
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link mr-5" href="#" id="product-link" data-toggle="dropdown"
+            <a class="logo-font font-weight-bold nav-link mr-5" href="#" id="account-link" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 My Account
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="product-link">
+            <div class="dropdown-menu border-0" aria-labelledby="account-link">
                 {% if request.user.is_authenticated %}
                 {% if request.user.is_superuser %}
                 <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
@@ -73,3 +73,5 @@
                 {% endif %}
             </div>
         </li>
+    </ul>
+</div>
