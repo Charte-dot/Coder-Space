@@ -1,7 +1,7 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link mr-5" href="#" id="product-link" data-toggle="dropdown"
+            <a class="logo-font font-weight-bold nav-link mr-5" href="#" id="all-products-link" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 All Products
             </a>
@@ -38,7 +38,7 @@
                 aria-haspopup="true" aria-expanded="false">
                 Sound
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="sound-drop">
+            <div class="dropdown-menu border-0" aria-labelledby="sound-link">
                 <a href="{% url 'products' %}?category=headsets" class="dropdown-item">Headphones</a>
                 <a href="{% url 'products' %}?category=speakers" class="dropdown-item">Speakers</a>
             </div>
