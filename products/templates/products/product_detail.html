@@ -110,8 +110,8 @@
                         </div>
                         <hr>
                         {% if user.is_authenticated %}
-                        <a href="{% url 'add_review' product.id %}"><button type="button"
-                                class="btn btn-black btn-primary mt-4">Add review</button></a>
+                        <a href="{% url 'add_review' product.id %}"
+                                class="btn btn-black btn-primary mt-4">Add Review</a>
                         {% else %}
                         <div class="row comment-text">
                             <p class="text-center ml-4">Login in to add a review</p>
