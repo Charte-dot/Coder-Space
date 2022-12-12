@@ -10,11 +10,6 @@ def add_review(request, product_id):
     """
     view to add reviews to the db
     """
-    # checks if user has permition to add products
-    if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only site admin can do that.')
-        return redirect(reverse('products'))
-
     if request.method == 'POST':
 
         product = get_object_or_404(Product, pk=product_id)

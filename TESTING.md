@@ -278,4 +278,253 @@ For User Story testing first navigate to the [Coder Space website](https://coder
 
 ![](documentation/screenshots/password-success.jpg)
 
+---
+
+* **As a registered shopper I can Have a confirmation email to advise that registration has bee successful, So I can Have acknowledgement that my registration details were accepted and saved. [#14](https://github.com/Charte-dot/Coder-Space/issues/14)**
+
+**Acceptance Criteria**
+1: User clicks on my account nav tab in navigation to open profile
+2: User can view delivery details and order history in my profile
+
+**Testing Steps**:
+1. When not logged in click on profile icon in navigation menu
+2. Type https://coder-space.herokuapp.com/profile/ into the address bar
+2. Log in and repeat step 1
+2. Click on My Profile
+
+**Expected Result**:
+- User can view order history and delivery information for their own account when they click on My Profile
+- If not logged in My Profile link is not visible
+- When not logged in if user navigates to https://coder-space.herokuapp.com/profile/ they are redirected to the Sign In page
+
+**Actual Result**:
+- User can view order history and delivery information for their own account when they click on My Profile
+- If not logged in My Profile link is not visible
+- When not logged in if user navigates to https://cpder-space.herokuapp.com/profile/ they are redirected to the Sign In page
+
+**Pass/Fail: Pass**✅
+
+![](documentation/screenshots/verify.jpg)
+
+![](documentation/screenshots/confirm.jpg)
+
+![](documentation/screenshots/confirm-success.jpg)
+
+![](documentation/screenshots/non-admin-sign.jpg)
+
+---
+
+* **As a Registered shopper I can have a personal profile, So I can View my personal details for delivery and payment and update as needed [#15](https://github.com/Charte-dot/Coder-Space/issues/15)**
+
+**Acceptance Criteria**
+- Email is sent to user account with confirmation link
+- Confirmation link links to website confirmation page
+- User is able to login with login credentials
+
+
+**Testing Steps**:
+1. Make sure to be not logged in to the website and click on the profile icon in the navbar
+2. Click on the Register link in the dropdown menu
+3. Complete the form fields as in User Story #9
+4. Navigate to user's email account
+5. Click on link in email to confirm email
+6. Click on confirm button on website
+7. Login with registration details
+
+**Expected Result**:
+1. Email is sent to user account with link to confirm address
+2. When email link is clicked user is directed to website link to click to confirm email address.
+3. Registration is confirmed with message.
+4. User logs in with provided login information
+
+**Actual Result**:
+1. Email is sent to user account with link to confirm address
+2. When email link is clicked user is directed to website link to click to confirm email address.
+3. Registration is confirmed with message.
+4. User logs in with provided login information
+
+**Pass/Fail: Pass**✅
+
+![](documentation/screenshots/login.jpg)
+
+![](documentation/screenshots/non-admin-sign.jpg)
+
+![](documentation/screenshots/user-profile.jpg)
+
+---
+
+* **As a shopper I want to be able to easily see what I have searched for and the number of results so that I can quickly see how many products are available[#17](https://github.com/Charte-dot/Coder-Space/issues/17)**
+
+**Acceptance Criteria**
+- Search page displays search item and number of results found above the display of search items
+
+**Testing Steps**:
+1. Type single word into search box in navbar
+2. Click search icon or enter
+3. Repeat and enter empty search
+
+**Expected Result**:
+1. Above products found list the search term and number of results is printed
+2. If no results are found this is stated
+
+**Actual Result**:
+1. Above products found list the search term and number of results is printed
+2. If no results are found this is stated
+
+**Pass/Fail: Pass**✅
+
+![](documentation/screenshots/product-count.jpg)
+
+![](documentation/screenshots/product-count-2.jpg)
+
+---
+
+* **As a Shopper I can select the quantity of a product that I am purchasing, So I can visually see the correct quantity and modify if needed. [#18](https://github.com/Charte-dot/Coder-Space/issues/18)**
+
+**Acceptance Criteria**
+- User can select quantity of product to add to bag when looking at the product detail page
+
+**Testing Steps**:
+1. Click on products link in navbar
+2. Click on item to test
+3. Click on quantity selector box + and - in turn
+4. Click on add to basket
+5. Enter a value into the box, including decimal numbers and negative numbers
+6. Click on add to basket button
+
+**Expected Result**:
+- Product quantity is updated in basket as selected
+- Error message appears when decimal or negative is entered
+
+**Actual Result**:
+- Product quantity is updated as selected when integer
+- Validation errors show when decimal or negative number is entered into the box
+
+**Pass/Fail: Pass**✅
+
+![](documentation/screenshots/amount.jpg)
+
+![](documentation/screenshots/amount-error.jpg)
+
+![](documentation/screenshots/bad-notif.jpg)
+
+---
+
+* **As a Shopper I can View items as they are placed in my basket, So I can keep account of the total cost of the purchase [#19](https://github.com/Charte-dot/Coder-Space/issues/19)**
+
+**Acceptance Criteria**
+-  User can click on basket icon in navbar from any page to see contents
+
+**Testing Steps**
+1. Follow steps in User Story #19 to add item(s) to basket
+2. View basket icon in navbar
+3. Click on basket icon in navbar
+
+**Expected Result**:
+1. Total cost of items in basket is viewable in navbar
+2. Basket icon opens when clicked to full basket page
+
+**Actual Result**:
+1. Total cost of items in basket is viewable in navbar
+2. Basket icon opens when clicked to full basket page
+
+
+**Pass/Fail: Pass**✅
+
+![](documentation/screenshots/cost-view.jpg)
+
+![](documentation/screenshots/cost-view-2.jpg)
+
+---
+
+* **As a Shopper I can enter my payment details hassle free, So I can checkout my purchases quickly and easily [#21](https://github.com/Charte-dot/Coder-Space/issues/21)**
+
+**Acceptance Criteria**
+
+1: User clicks on checkout to complete payment form
+2: Success message visible on completion of payment process
+
+**Testing Steps**:
+1. With items in basket and in basket page (follow previous steps) click Checkout button
+2. Attempt to checkout without completing form fields correctly
+3. Complete fields correctly
+4. Complete card payment field with fake card details
+5. Complete card payment with card number 4242 4242 4242 4242 
+
+**Expected Result**:
+1. Error message shows when fields are incorrectly completed
+2. Error message shows when card number does not use test card number
+3. Success message and order confirmation message displayed to user when order is completed
+4. Payment success shown in Stripe dashboard
+5. Stripe webhooks shows charge success
+
+**Actual Result**:
+1. Error message shows when fields are incorrectly completed
+2. Error message shows when card number does not use test card number
+3. Success message and order confirmation message displayed to user when order is completed
+4. Payment success shown in Stripe dashboard
+5. Stripe webhooks shows charge success
+
+**Pass/Fail: Pass**✅
+
+![](documentation/screenshots/check-1.jpg)
+
+![](documentation/screenshots/check-2.jpg)
+
+![](documentation/screenshots/card-error.jpg)
+
+![](documentation/screenshots/stripe-3.jpg)
+
+---
+
+* **As a Shopper I can Give my personal payment details and information and know its secure and safe , So I can Be confident to be able to provide the necessary information to make a purchase [#22](https://github.com/Charte-dot/Coder-Space/issues/22)**
+
+**Acceptance Criteria**
+1. User receives success/error messages when completing order/payment
+2. User can view order history in personalised profile when logged in
+3. Padlock appears in site address bar indicating secure payment process and padlock in checkout button
+
+**Testing Steps**:
+1. Complete steps to make test purchase as outlined above
+6. Click on profile icon in navbar
+7. Click on My Profile link
+
+**Expected Result**:
+1. Padlock symbol appears in address bar during checkout process and padlock is on checkout button
+2. Success message and order confirmation message displayed to user when order is completed
+3. Order appears in user's secure profile page
+
+**Actual Result**:
+1. Padlock symbol appears in address bar during checkout process and padlock is on checkout button
+2. Success message and order confirmation message displayed to user when order is completed
+3. Order appears in user's secure profile page
+
+**Pass/Fail: Pass**✅
+
+![](documentation/screenshots/secure-checkout.jpg)
+
+![](documentation/screenshots/profile.jpg)
+
+---
+
+* **As a Shopper recieve an order confirmation after order has been placed, To have an written record of my purchases [#23](https://github.com/Charte-dot/Coder-Space/issues/23)**
+
+**Acceptance Criteria**
+1. User receives order confirmation in terminal with name, order information.
+
+**Testing Steps**:
+- Complete test purchase steps as outlined above
+
+**Expected Result**:
+- Order confirmation message is visible with all order details on screen on completion of purchase
+
+**Actual Result**:
+
+- Order confirmation message is visible with all order details on screen on completion of purchase
+
+![](documentation/screenshots/order-complete.png)
+
+**Pass/Fail: Pass**✅
+
+![](documentation/screenshots/order-confirm.jpg)
 
