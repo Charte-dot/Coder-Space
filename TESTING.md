@@ -4,6 +4,30 @@
 - ##  [Manual testing](#Manual-testing)
      - [Testing User Stories](#Testing-user-stories)
 
+- ##  [Feature Testing](#Feature-testing)
+     - [Navbar](#Navbar)
+     - [Page Links](#Page-links)
+     - [Search box](#Search-box)
+     - [Shopping basket](#Shopping-basket)
+     - [Header](#Header)
+     - [Footer](#Footer)
+     - [About page](#About-page)
+     - [Contact page](#Contact-page)
+     - [Newsletter subscription](#Newsletter-subscription)
+     - [Products page](#Products-page)
+     - [Products detail page](#Products-detail-page)
+     - [Edit and delete](#Edit-and-delete)
+     - [Quantity selector box](#Quantity-selector-box)
+     - [Review form](#Review-form)
+     - [Add product page](#Add-product-page)
+     - [My profile page](#My-profile-page)
+     - [Register page](#Register-page)
+     - [Login page](#Login-page)
+     - [Logout page](#Logout-page)
+     - [Basket page](#Basket-page)
+     - [Checkout buttons](#Checkout-buttons)
+     - [Custom error handling pages](#Custom-error-handling-pages)
+
 
 ## Manual Testing
 The project was thoroughly tested by the developer and multiple user from friends and family members. Thorough testing was conducted by the developer and multiple users among friends and family especially with order creation, updating totals, editing line items. Bugs were found and fixed as detailed below in [Bugs](#bugs-and-fixes) section. Testing steps and results are detailed as follows.
@@ -522,9 +546,900 @@ For User Story testing first navigate to the [Coder Space website](https://coder
 
 - Order confirmation message is visible with all order details on screen on completion of purchase
 
-![](documentation/screenshots/order-complete.png)
-
 **Pass/Fail: Pass**✅
 
 ![](documentation/screenshots/order-confirm.jpg)
+
+---
+
+* **As a Site owner I can add products to my site , So I can add new items to the site when needed [#24](https://github.com/Charte-dot/Coder-Space/issues/24)**
+
+**Acceptance Criteria**
+1. Admin can click on Add a product link in nav bar to display add product form
+2. Admin can add a product, save by clicking add product button and view on site
+
+**Testing Steps**:
+When logged in as Administrator
+1. Click on my account in navbar
+2. Click on product management
+3. Complete product information fields incorrectly
+4. Complete product information fields correctly
+5. Click Cancel button
+6. Repeat steps 1-4 and click Add Product
+7. Navigate to Shop page by clicking on all products
+
+**Expected Result**:
+1. Invalid entries/missing fields are highlighted
+2. Cancel button returns user to Shop page
+3. Add Product button adds a Product to the Shop page
+4. Success message displays
+5. If no image added, placeholder image displays
+
+**Actual Result**:
+1. Invalid entries/missing fields are highlighted
+2. Cancel button returns user to Shop page
+3. Add Product button adds a Product to the Shop page
+4. Success message displays
+5. If no image added, placeholder image displays
+
+**Pass/Fail: Pass**✅
+
+![](documentation/screenshots/admin-view.jpg)
+
+![](documentation/screenshots/product-1.jpg)
+
+![](documentation/screenshots/admin-add-prod.jpg)
+
+![](documentation/screenshots/add-prod.jpg)
+
+---
+
+* **As a site owner I can edit and update a product so that I can change information on a product as needed. [#25](https://github.com/Charte-dot/Coder-Space/issues/25)**
+
+**Acceptance Criteria**
+1. Admin can click on an edit button in product details page to open up edit form
+2. Admin can edit and then click update button to update and save changes to products
+
+**Testing Steps**:
+1. When not logged in as admin/superuser click on All Products link in Shop dropdown navbar menu
+2. View a product to check edit/remove buttons not visible
+3. Log in as admin
+4. Click on Edit button on product
+5. In Edit Product form edit fields as required
+6. Click on Update Product button
+7. Check product details have changed by clicking to open product detail view from All Products page
+9. Log out
+10. Repeat steps 1-8 for product detail page by clicking on a product in the Shop to open up the detail page
+11. Repeat steps 1-4 and click cancel
+
+**Expected Result**:
+- Edit/Remove buttons are not visible to non-admin users
+- Product fields are updated when edit form is completed and Update PRoduct button is clicked
+- Success message is displayed when product is updated
+- When cancel button is clicked user is returned to Shop page
+
+**Actual Result**:
+- Edit/Remove buttons are not visible to non-admin users
+- Product fields are updated when edit form is completed and Update PRoduct button is clicked
+- Success message is displayed when product is updated
+- When cancel button is clicked user is returned to Shop page
+
+**Pass/Fail: Pass**✅
+
+![](documentation/screenshots/admin-prod.jpg)
+
+![](documentation/screenshots/admin-edit.jpg)
+
+---
+
+* **As a site owner I can delete products so that I can remove Items no longer for sale. [#26](https://github.com/Charte-dot/Coder-Space/issues/26)**
+
+**Acceptance Criteria**
+1. Admin can click on delete button on product detail page to delete a product
+
+**Testing Steps**
+1. Click on All Products link in Shop dropdown navbar menu
+2. Click on delete button on product in All Products Page
+3. Check product is deleted in All Products page
+4. Click on All Products link in Shop dropdown navbar menu
+5. Click on Product to open up full product detail page
+6. Click on delete button
+7. Open up product detail page by clicking on product in All Products page 
+8. Repeat step 2 - 5
+9. Check product is deleted in All Products page
+
+**Expected Result**:
+1. Product has been deleted
+2. Success message is displayed
+
+**Actual Result**:
+1. Product has been deleted
+2. Success message is displayed
+
+**Pass/Fail: Pass**✅
+
+![](documentation/screenshots/admin-prod.jpg)
+
+![](documentation/screenshots/admin-delete.jpg)
+
+---
+
+* **As a Shopper I can review Products, So I can give a good view to other shoppers of the product. [#28](https://github.com/Charte-dot/Coder-Space/issues/28)**
+
+**Acceptance Criteria**
+1. Comment option on all posts
+2. Comments appear in descending order like a conversation
+
+**Testing Steps**
+1. Click on All Products link in Shop dropdown navbar menu
+2. Click on a product you want to review.
+3. If user is logged in a "leave a review button" is displayed
+4. If user is unregistered or not logged in a "log in to review" button is displayed
+5. To leave a review press review button.
+6. Fill in review form.
+7. Review appears on products
+8. Admin can delete review form admin panel.
+
+**Expected Result**:
+1. Review has been posted
+2. Success message is displayed
+
+**Actual Result**:
+1. Review has been posted
+2. Success message is displayed
+
+**Pass/Fail: Pass**✅
+
+![](documentation/screenshots/add-review.jpg)
+
+![](documentation/screenshots/review-success.jpg)
+
+![](documentation/screenshots/review-view.jpg)
+
+---
+* **As a Shopper I can contact the store with any product or purchase queries, So I can resolve any product or purchase issues I may have [#29](https://github.com/Charte-dot/Coder-Space/issues/29)**
+
+**Acceptance Criteria**
+1. User can click on the contact us in quick links to send a message to coder space
+2. Success message displays
+
+**Testing Steps**:
+1. Click on contact us in quick links in footer
+2. Complete form fields first attempting to submit empty fields
+3. Click on Send
+
+
+**Expected Result**:
+1. Links to form in footer open up contact form
+2. When fields are incorrectly completed error messages display
+3. Message sent success message displays when message is sent
+4. Success message displays when form is submitted
+5. Contact Message appears in admin panel
+
+**Actual Result**:
+1. Links to form in footer open up contact form
+2. When fields are incorrectly completed error messages display
+3. Message sent success message displays when message is sent
+4. Success message displays when form is submitted
+5. Contact Message appears in admin panel
+
+**Pass/Fail: Pass**✅
+
+![](documentation/screenshots/contact-1.jpg)
+
+![](documentation/screenshots/contact-success.jpg)
+
+
+---
+* **As a Shopper I want to be able to sign up to a newsletter, So I can keep up to date with new products that become available [#30](https://github.com/Charte-dot/Coder-Space/issues/30)**
+
+**Acceptance Criteria**
+1. User can sign up with email to a newsletter subscription service on the site.
+
+**Testing Steps**
+1. Click on subscribe button in footer
+2. Complete the email section
+3. Click on Send
+
+**Expected Result**:
+1. Link to subscribe form opens
+2. When fields are incorrectly completed error messages display
+3. Message sent success message displays when message is sent
+4. User recieves an email notifying of subscription to Coder Space newletter.
+5. If user unsubscribes to newsletter, confirmation email is also sent.
+
+
+**Expected Result**:
+1. Link to subscribe form opens
+2. When fields are incorrectly completed error messages display
+3. Message sent success message displays when message is sent
+4. User recieves an email notifying of subscription to Coder Space newletter.
+5. If user unsubscribes to newsletter, confirmation email is also sent.
+
+**Pass/Fail: Pass**✅
+
+![](documentation/screenshots/sub-success.jpg)
+
+![](documentation/screenshots/email-sub.jpg)
+
+![](documentation/screenshots/unsub-sucess.jpg)
+
+![](documentation/screenshots/unsub-email-success.jpg)
+
+![](documentation/screenshots/sub-error.jpg)
+
+---
+
+## Features Testing
+
+## Navbar ##
+
+**Logo**
+
+**Expected Result**: 
+- Links to home page
+
+**Testing Steps**:
+- Click on logo in navbar menu
+
+**Actual Result**:
+- Links to home page
+
+**Pass/Fail: Pass**✅
+
+![](documentation/screenshots/logo.png)
+
+---
+## Page Links ##
+
+**Expected Result**:
+- All links to pages link to the corresponding pages
+- When the navigation page menu links are hovered over the font color changes to white
+
+
+**Testing Steps**:
+1. Navigate to navbar menu
+2. Click on each page link in turn: All products, furniture, computers, sound, room decor and my account.
+3. Repeat for collapsed menu
+
+**Actual Result**:
+- All page links work as expected
+- Links change colour on hover
+-
+**Pass/Fail: Pass**✅
+
+![](documentation/screenshots/nav-bar-full.jpg)
+
+![](documentation/screenshots/nav-bar-drop.jpg)
+
+---
+
+## Search Box ## 
+On large screens a search box appears in the center of the nav bar. Users can enter a single word to search within the title or description of a product. Users can click enter or the magnifying glass icon to enter the search. The products list is then filtered by the search term and resulting products are displayed with the number of results displayed above. If no products are found '0 products found' is displayed. On smaller screens the search box is hidden behind a search icon and when clicked the search box drops down/.
+
+**Expected Result**:
+1. User can enter a search word into the search box
+2. Above products found list the search term and number of results is printed
+3. If no results are found this is stated
+4. If empty search is entered error message is displayed
+
+**Testing Steps**:
+1. Type single word into search box in navbar
+2. Click search icon or enter
+3. Repeat and enter empty search
+
+**Actual Result**:
+1. Search term and number of results are printed including if none found
+2. Error message displays if search is empty
+
+
+**Pass/Fail: Pass**✅
+
+![](documentation/screenshots/search-error.jpg)
+
+![](documentation/screenshots/search-success.jpg)
+
+![](documentation/screenshots/search-mobile.jpg)
+
+---
+
+## Shopping Basket ##
+ Icon with total cost indicator: On large screens the shopping basket appears on the right of the menu. When clicked the icon opens up the current basket page. Beside the basket is an indicator of the total cost of the items currently in the basket, also coloured red to match the basket. 
+
+**Expected Result**:
+1. When clicked the icon opens up the full current basket page. 
+2. The indicator to the right of the basket icon indicates the total cost of the items currently in the basket
+3. The indicator updates as items are added to tbe basket
+
+**Testing Steps**:
+1. Click on a product in All Products
+2. Click on Add to Basket
+2. Check that basket total updates in basket icon
+
+**Actual Result**:
+1. Total amount in basket is updated when product is added and total displays in navbar
+
+**Pass/Fail: Pass**✅
+
+![](documentation/screenshots/cost-view.jpg)
+
+---
+
+## Header ##
+The navbar sticks to the top of the screen as the user scolls on larger screens but not on smaller screens where space is limited
+
+**Expected Result**:
+- Navigation menu remains displayed when scrolling for large screens but scrolls with smaller screens
+
+**Testing Steps**:
+1. On desktop view Home Page or any page start to scroll from top of screen
+2. Repeat for mobile view
+
+**Actual Result**:
+- Navigation menu remains displayed when scrolling for large screens but scrolls with smaller screens
+
+**Pass/Fail: Pass**✅
+
+![](documentation/screenshots/nav-bar-full.jpg)
+
+![](documentation/screenshots/nav-mobile.jpg)
+
+---
+
+## Footer ##
+- The footer is divided into three sections: Quick links to home, about, contact and privacy pages. The center column is a subscribe to the newsletter with button that leads user to a separate page to subscribe. The Facebook,Twitter and Instagram social media links do not currently link directly to business pages as the business is not currently live. 
+
+**Testing Steps**:
+Click on each link in footer in turn and check correct page opens
+
+**Expected Result**:
+1. All links open up correct corresponding pages
+2. The social media icons link to Facebook, Twitter and Instagram main pages. 
+3. When the user clicks on the Contact page link the Contact page form opens.
+4. The Subscribe button takes the user to a subscribe page with an unsubscribe option.
+
+**Expected Result**:
+1. All links open up correct corresponding pages
+2. The social media icons link to Facebook, Twitter and Instagram main pages. 
+3. When the user clicks on the Contact page link the Contact page form opens.
+4. The Subscribe button takes the user to a subscribe page with an unsubscribe option.
+
+**Pass/Fail: Pass**✅
+
+![](documentation/screenshots/footer.jpg)
+
+---
+
+## About Page ##
+- Features information about the store. 
+
+**Testing Steps**:
+1. Navigate to About Page by clicking on link in footer menu
+
+**Expected Result**:
+- About link opens about page
+
+**Actual Result**:
+- About link opens about page
+
+**Pass/Fail: Pass**✅
+
+![](documentation/screenshots/about.jpg)
+
+---
+
+## Contact Page ##
+- A form for user to contact store with any queries. 
+
+**Testing Steps**:
+1. Navigate to contact Page by clicking on link in footer menu
+2. Fill in contact us form.
+4. Press Send.
+
+**Expected Result**:
+- contact link opens about page
+- Users are notified of any form errors.
+- When submitted a notification alerts the user that the form has been sent.
+
+**Actual Result**:
+- contact link opens about page
+- Users are notified of any form errors.
+- When submitted a notification alerts the user that the form has been sent.
+
+**Pass/Fail: Pass**✅
+
+![](documentation/screenshots/contact-1.jpg)
+
+![](documentation/screenshots/contact-success.jpg)
+
+---
+
+## Newsletter subscription ##
+- A form for user to subscribe to an online newsletter
+
+**Testing Steps**:
+1. Navigate to Subscribe Page by clicking on subscribe button in footer menu
+2. Fill in email field on the form.
+4. Press Send.
+
+**Expected Result**:
+- Subscribe button opens about page
+- Users are notified of any email errors.
+- When submitted a notification alerts the user that the form has been sent.
+- User recieves an email notifying of the subscription.
+
+**Actual Result**:
+- Subscribe button opens about page
+- Users are notified of any email errors.
+- When submitted a notification alerts the user that the form has been sent.
+- User recieves an email notifying of the subscription.
+
+
+**Pass/Fail: Pass**✅
+
+![](documentation/screenshots/sub-news.jpg)
+
+![](documentation/screenshots/sub-success.jpg)
+
+![](documentation/screenshots/sub-error.jpg)
+
+![](documentation/screenshots/email-sub.jpg)
+
+---
+
+## Products page ##
+
+- Products page displays all products available in store
+
+**Testing Steps**:
+1. Navigate to products page by clicking on the shop now button on the home page or on All Products in Shop navbar dropdown menu 
+2. Check view on large, medium and small sized screens
+3. Click on product images to open product detail
+4. If logged as Administrator check that edit/delete buttons are visible
+5. If not logged as Administrator check that edit/delete buttons are not visible
+6. Login/Logout as Administrator to check the visibility of edit/delete buttons
+
+**Expected Results**:
+1. When all products is selected in the navigation menu the products are listed in rows of four on extra-large screens, three on large screens, two on medium and one on small screens
+2. Above the products list on the left on medium screens and up and is text specifying the number of products. 
+3. Each product image in the product list links to its product detail page
+6. Edit/delete buttons are visible only to superuser/administrator under the product price
+
+
+**Actual Result**:
+1. When all products is selected in the navigation menu the products are listed in rows of four on extra-large screens, three on large screens, two on medium and one on small screens
+2. Above the products list on the left on medium screens and up and is text specifying the number of products. 
+3. Each product image in the product list links to its product detail page
+6. Edit/delete buttons are visible only to superuser/administrator under the product price
+
+**Pass/Fail: Pass**✅
+
+![](documentation/screenshots/prod-xlg.jpg)
+
+![](documentation/screenshots/prod-lg.jpg)
+
+![](documentation/screenshots/prod-md.jpg)
+
+![](documentation/screenshots/prod-sm.jpg)
+
+
+---
+## Product Detail Page ##
+
+**Product Details**- This page features a large image of the product and product detail information specific to each product 
+
+**Testing Steps**:
+1. Navigate to the Product detail page by clicking on an item in the products page
+
+**Expected Result**:
+1. Each product detail page features a large image of the product
+2. Product details can be seen on the page as appropriate - name, price, description. 
+
+**Actual Results**:
+1. Each product detail page features a large image of the product
+2. Product details can be seen on the page as appropriate - name, price, description. 
+
+**Pass/Fail: Pass**✅
+
+![](documentation/screenshots/prod-detail.jpg)
+
+---
+## Edit and delete ##
+
+**Testing Steps**:
+1. Navigate to product detail page when not logged in as administrator
+2. Repeat step 1 after logging in as administrator
+For these steps please create a test product by clicking on the my account in the navbar and then clicking Add a Product and completing the fields
+3. Open the test product created in product detail view
+4. Click on Edit button
+5. Leave fields empty and click Update Product
+5. Complete product information fields correctly
+6. Click Cancel button
+7. Repeat steps 1-4 and click Update Product
+8. Navigate to products page by clicking on all products link
+9. Locate test product and click Delete
+
+**Expected Result**:
+1. Edit/delete buttons are visible to superuser/administrator under the product name
+2. Edit/delete buttons are not visible to user who is not a superuser/administrator
+3. Edit button when clicked opens Update product form
+4. User is able to complete and submit form when required fields are filled
+5. Empty required fields yield error message and form cannot be submitted
+6. Update Product button function updates product information
+7. Delete button when clicked deletes product
+8. Success message displays after update or delete function is completed
+
+**Actual Result**:
+1. Edit/delete buttons are visible to superuser/administrator under the product name
+2. Edit/delete buttons are not visible to user who is not a superuser/administrator
+3. Edit button when clicked opens Update product form
+4. User is able to complete and submit form when required fields are filled
+5. Empty required fields yield error message and form cannot be submitted
+6. Update Product button function updates product information
+7. Delete button when clicked deletes product
+8. Success message displays after update or delete function is completed
+
+**Pass/Fail: Pass**✅
+
+![](documentation/screenshots/admin-edit.jpg)
+
+![](documentation/screenshots/admin-delete.jpg)
+
+---
+## Quantity selector box ##
+
+**Testing Steps**:
+1. Click on all products link in navbar
+2. Click on item to test
+3. Click on quantity selector box + and - in turn
+4. Click on add to basket
+5. Click on basket icon
+
+**Expected Result**:
+1. The + and - selector buttons increase/decrease quantity number inside the box. 
+2. Users can also enter number or use arrows inside box to increase/decrease quantity of item
+
+**Actual Result**:
+1. The + and - selector buttons increase/decrease quantity number inside the box. 
+2. Users can also enter number or use arrows inside box to increase/decrease quantity of item
+
+![](documentation/screenshots/amount.jpg)
+
+![](documentation/screenshots/amount-error.jpg)
+
+---
+## Review form ##
+
+**Testing Steps**:
+1. Click on all products link in navbar
+2. Click on item to review.
+3. If user is logged in a "leave a review" button is shown.
+4. If user is not logged in a "Log in to leave a review" prompt is displayed.
+5. Click on leave a review button.
+6. Fill in the review form.
+7. Press send review.
+8. Review appears on the product.
+9. Admin can delete review if unsuitable for the admin panel.
+
+**Expected Result**:
+1. User selects leave and review and fills in form
+2. An alert lets the user know that they have posted a review.
+3. Review is displayed under the product user is reviewing.
+
+**Actual Result**:
+1. User selects leave and review and fills in form
+2. An alert lets the user know that they have posted a review.
+3. Review is displayed under the product user is reviewing.
+
+![](documentation/screenshots/add-review.jpg)
+
+![](documentation/screenshots/review-success.jpg)
+
+![](documentation/screenshots/review-view.jpg)
+
+---
+
+## Add a Product Page ##
+
+- This page can only be accessed by the administrator/superuser and is only visible in the navbar menu if the user is logged in as administrator or superuser.
+- This page features a form for the administrator/superuser to add a product with fields from the product model: category options, product detail, price, rate and picture of product.
+- The form to edit a product accessed by the admistrator from the products or product detail page is the same form as for add a product with the fields auto completed which can be changed by the administrator.
+
+**Testing Steps**:
+When logged in as Administrator
+1. Click on My account in navbar
+2. Click on product management
+3. Complete product information fields incorrectly
+4. Click Cancel button
+5. Repeat steps 1-4 and click Add Product
+7. Navigate to Shop page by clicking on all products link
+
+**Expected Result**:
+1. Invalid entries/missing fields are highlighted
+2. Cancel button returns user to Shop page
+3. Add Product button adds a Product to the Shop page
+4. Success message displays
+5. If no image added, placeholder image displays
+
+**Actual Result**:
+1. Invalid entries/missing fields are highlighted
+2. Cancel button returns user to Shop page
+3. Add Product button adds a Product to the Shop page
+4. Success message displays
+5. If no image added, placeholder image displays
+
+**Pass/Fail: Pass**✅
+
+![](documentation/screenshots/admin-view.jpg)
+
+![](documentation/screenshots/product-1.jpg)
+
+![](documentation/screenshots/product-2.jpg)
+
+![](documentation/screenshots/admin-add-prod.jpg)
+
+---
+
+## My Profile Page ##
+
+- The link to this page can only be seen if a user is logged in
+- On the left the default delivery information is displayed if the user has selected save my information during the chackout process.
+- The user can change the default information by entering information into the fields
+- An update button is below the delivery information form which can be clicked to submit and save changed information
+- This page can only be accessed by the user who is signed in
+- On the right the user's order history is displayed in a table with order number, date of order, items ordered and the order total. The Order number is truncated but on hover the full number can be viewed. On click the full past order confirmation is displayed
+
+**Testing Steps**:
+1. When not logged in click on My account in navbar
+2. Repeat step 1 after logging in
+3. Click My Profile in Profile dropdown menu
+3. Complete or change delivery information
+4. Click update
+5. Log out
+6. Repeat steps 2-3
+7. Hover over order number
+8. Click on order number
+
+**Expected Result**:
+1. Link is only visible if user is logged in and can only be accessed by this user
+2. User's saved delivery information is visible
+3. Default delivery information can be changed and saved
+4. The update button functions to save and update infomation
+5. User's order history is displayed
+6. When the order number is hovered over the full number is visible
+7. When the order number is clicked the past order confirmation is opened
+
+**Actual Result**:
+1. Link is only visible if user is logged in and can only be accessed by this user
+2. User's saved delivery information is visible
+3. Default delivery information can be changed and saved
+4. The update button functions to save and update infomation
+5. User's order history is displayed
+6. When the order number is hovered over the full number is visible
+7. When the order number is clicked the past order confirmation is opened
+
+**Pass/Fail: Pass**✅
+
+![](documentation/screenshots/login.jpg)
+
+![](documentation/screenshots/profile.jpg)
+
+---
+
+## Register Page ##
+
+- Features a form with input boxes for email and email confirmation, username, password and password confirmation
+- Two buttons, signup and back to login page
+
+**Acceptance Criteria**: User can register for an account with email and password
+
+**Testing Steps**:
+
+1. Make sure to be not logged in to the website and click on the my account in the navbar
+2. Click on the Register link in the dropdown menu
+3. In the form click on the back to login button
+4. Repeat steps 1 and 2
+5. Repeat steps 1 and 2 and click on sign in link
+6. Reapeat steps 1 and 2
+7. Click on the sign up button without entering anything in the first field
+8. Complete the first field and repeat step 7 for the other fields
+
+**Expected Result**:
+
+1. Back to Login button links to sign in page
+2. When information is incomplete or incorrect error message is displayed
+3. When registration is complete success message appears asking the user to confirm their email address
+
+**Actual Result**:
+
+1. Back to login and sign up links link correctly to sign in page
+2. Error message displays when no or invalid text is entered
+3. Success message asking user to confirm their email address appears when user has registered
+
+**Pass/Fail: Pass**✅
+
+![](documentation/screenshots/register.jpg)
+
+![](documentation/screenshots/reg-error.jpg)
+
+![](documentation/screenshots/verify.jpg)
+
+![](documentation/screenshots/confirm.jpg)
+
+![](documentation/screenshots/confirm-success.jpg)
+
+---
+
+## Login Page ##
+
+- Features a form with input boxes for required fields username and password
+- Two buttons are featured at the bottom of the form for home and sign in
+
+**Acceptance Criteria**
+
+- When user clicks on login/logout they can access My Account page
+
+**Testing Steps**:
+
+1. When not logged in click on my account in navigation menu
+2. Click on login link
+3. Complete username and password boxes
+4. Click sign in button
+
+**Expected Result**:
+
+- User is signed in
+- User's information is automatically completed if they have checked the remember me box
+
+**Actual Result**:
+- User is signed in
+- User's information is automatically completed if they have checked the remember me box
+
+**Pass/Fail: Pass**✅
+
+![](documentation/screenshots/sign-in.jpg)
+
+---
+
+## Logout Page ##
+
+**Acceptance Criteria**
+
+- When user clicks on logout they can access My Account logout page
+- User can sign out from the sign out form
+
+**Testing Steps**:
+
+1. When logged in click on my account in navigation menu
+2. Click on logout link
+3. Click Sign Out button
+
+**Expected Result**:
+
+1. Logout link in profile menu links to SIgn Out form
+2. User is signed out
+
+**Actual Result**:
+
+1. Logout link in profile menu links to SIgn Out form
+2. User is signed out
+
+**Pass/Fail: Pass**✅
+
+![](documentation/screenshots/sign-out.jpg)
+
+---
+
+## Basket Page ##
+
+- Features summary information of products added to basket: image of products, title, size, price, delivery cost and total
+- A button is available to remove items in one go from the basket
+- Two CTA buttons are at the bottom of the form for users to return to the shop or checkout
+
+**Expected Result**:
+
+- Summary information of items in basket clearly displayed and updated: image of products, title, price, delivery cost and total
+
+**Testing Steps**:
+
+1. Click on all products link in navbar then All Products in dropdown
+2. Click on item to test purchase
+4. Click on add to basket
+5. Click on basket icon to open basket and view contents
+
+**Actual Result**:
+
+- Summary information of items in basket clearly displayed and updated: image of products, title, price, delivery cost and total
+
+**Pass/Fail: Pass**✅
+
+![](documentation/screenshots/cost-view-2.jpg)
+
+---
+
+## Checkout buttons ##
+
+**Testing Steps**:
+
+1. Complete steps above to add product to basket
+2. Click the Shop button
+3. Return to the Basket page by clicking on the basket icon in the navbar
+4. Click on the Checkout button
+
+**Expected Result**:
+
+1. The Shop button returns the user to the Shop page
+2. The Checkout button opens the Checkout and payment page
+
+**Actual Result**:
+
+1. The Shop button returns the user to the Shop page
+2. The Checkout button opens the Checkout and payment page
+
+![](documentation/screenshots/checkout-btn.jpg)
+
+### Checkout Page
+
+- The Checkout page features input boxes for the necessary payment information inputs: name, email, phone number, street address, town or city, country, post code, country
+- At the bottom is the box for card payment information for Stripe. For testing purposes the number 4242 4242 4242 4242 is used
+- Two CTA buttons are at the bottom to return to adjust the basket or complete order buttons to complete the payment process
+
+**Testing Steps**:
+1. With items in basket and in basket page (follow previous steps) click Checkout button
+2. Attempt to checkout without completing form fields correctly
+3. Complete fields correctly
+4. Complete card payment field with fake card details
+5. Complete card payment with card number 4242 4242 4242 4242 
+6. Click Check out our specials link
+
+**Expected Result**:
+1. User can complete payment process and submit order
+2. User cannot checkout without completing required fields
+3. Logged in user's email address is prefilled
+4. On completion of payment a success message displays and a summary of the order
+5. A link displays at bottom to redirect user to Don't Miss tagged items (Specials) which functions correctly
+
+**Expected Result**:
+1. Error message shows when fields are incorrectly completed
+2. Error message shows when card number does not use test card number
+3. Success message and order confirmation message displayed to user when order is completed
+4. Payment success shown in Stripe dashboard
+5. Stripe webhooks show payment intent and charge success
+
+![](documentation/screenshots/check-1.jpg)
+
+![](documentation/screenshots/check-2.jpg)
+
+![](documentation/screenshots/card-error.jpg)
+
+![](documentation/screenshots/order-confirm.jpg)
+
+---
+## Custom Error Handling Pages
+
+* 404 page
+**Expected Result**:
+- Custom 404 page is displayed
+
+**Testing Steps**:
+- A non-existent address was typed into the address bar in this case https://coder-space.herokuapp.com/d
+
+**Actual Result**:
+- Custom 404 page is displayed
+
+![](documentation/screenshots/404-error.jpg)
+
+* 500 page
+
+**Expected Result**:
+- Custom 500 page is displayed
+
+**Testing Steps**:
+- This page displayed when another error was being tested
+
+**Actual Result**:
+- Custom 500 page is displayed
+
+![](documentation/screenshots/500-error.jpg)
+
 
