@@ -28,9 +28,44 @@
      - [Checkout buttons](#Checkout-buttons)
      - [Custom error handling pages](#Custom-error-handling-pages)
 
+- ##  [Code Validation](#Code-validation)
+- [HTML](#HTML)
+     - [Home App](#Home-app)
+     - [Footer](#Footer)
+     - [Products App](#Products-app)
+     - [Checkout](#Checkout)
+     - [Profile](#Profile)
+     - [Register](#Register)
+     - [Sign In Page](#Sign-in-page)
+     - [Sign Out Page](#Sign-out-page)
+     - [Reviews](#Reviews)
+
+- [CSS](#CSS)
+     - [Base](#Base)
+     - [Checkout](#Checkout)
+     - [Profile](#Profile)
+
+- [PEP 8 Validation](#Pep-8-validation)
+     - [Bag App](#Bag-app)
+     - [Checkout App](#Checkout-app)
+     - [Coder Space App](#Coder-space-app)
+     - [Contact App](#Contact-app)
+     - [Home App](#Home-app)
+     - [Newsletter App](#Newsletter-app)
+     - [Products App](#Products-app)
+     - [Profiles App](#Profiles-app)
+     - [Reviews App](#Reviews-app)
+
+- [LightHouse](#LightHouse)
+
+- ##  [Browser compatability](#Browser-compatability)
+- ##  [Responsiveness](#Responsiveness)
+- ##  [Bugs and fixes](#Bugs-and-fixes)
+
+
 
 ## Manual Testing
-The project was thoroughly tested by the developer and multiple user from friends and family members. Thorough testing was conducted by the developer and multiple users among friends and family especially with order creation, updating totals, editing line items. Bugs were found and fixed as detailed below in [Bugs](#bugs-and-fixes) section. Testing steps and results are detailed as follows.
+The project was thoroughly tested by the developer and multiple user from friends and family members. Thorough testing was conducted by the developer and multiple users among friends and family especially with order creation, updating totals, editing line items. Bugs were found and fixed as detailed below in [Bugs and fixes](#bugs-and-fixes) section. Testing steps and results are detailed as follows.
 
 ### Testing User Stories
 
@@ -1415,7 +1450,7 @@ When logged in as Administrator
 ![](documentation/screenshots/order-confirm.jpg)
 
 ---
-## Custom Error Handling Pages
+## Custom Error Handling Pages ##
 
 * 404 page
 **Expected Result**:
@@ -1442,4 +1477,419 @@ When logged in as Administrator
 
 ![](documentation/screenshots/500-error.jpg)
 
+---
+# Code Validation 
 
+## HTML 
+HTML was validated by [The W3C Markup Validation Service](https://validator.w3.org/)
+
+## Home app
+- index.html
+
+![#](documentation/validation/home-test.jpg)
+
+## Footer
+- About.html
+
+![#](documentation/validation/about-test.jpg)
+
+- Contact.html
+
+![#](documentation/validation/contact-test.jpg)
+
+- Subcription
+
+![#](documentation/validation/subscribe-test.jpg)
+
+- Unsubcription
+
+![#](documentation/validation/unsub-test.jpg)
+
+## Products app
+
+- Products.html
+
+![#](documentation/validation/products-test.jpg)
+
+
+- Product detail.html
+
+![#](documentation/validation/prod-detail-test.jpg)
+
+
+- Add product.html
+
+![#](documentation/validation/prod-add-test.jpg)
+
+
+- Edit product.html
+
+![#](documentation/validation/prod-edit-test.jpg)
+
+
+## Checkout Page
+
+- Checkout.html
+
+![#](documentation/validation/checkout-test.jpg)
+
+
+- Checkout success.html
+
+![#](documentation/validation/checkout-success-test.jpg)
+
+## Profile Page
+
+- Profile.html
+
+![#](documentation/validation/profile-test.jpg)
+
+# Register Page
+- Signup.html
+
+![#](documentation/validation/register-test.jpg)
+
+# Sign In Page
+- Login.html
+
+![#](documentation/validation/login-test.jpg)
+
+# Sign Out Page
+- Logout.html
+
+![#](documentation/validation/logout-test.jpg)
+
+# Reviews app
+- Add review.html
+
+![#](documentation/validation/review-test.jpg)
+
+---
+
+## CSS Validator
+
+CSS was validated by [Jigsaw w3 css validator Service](https://jigsaw.w3.org/css-validator/)
+
+# Base css
+
+![#](documentation/validation/base-css-test.jpg)
+
+# Checkout
+
+![#](documentation/validation/base-css-test.jpg)
+
+# Profile
+
+![#](documentation/validation/profile-css-test.jpg)
+
+---
+
+## PEP 8 Validation 
+
+PEP 8 Validation was checked using the new [Code Institute PEP 8 Validator](https://pep8ci.herokuapp.com/)
+
+# Bag App
+- bag_tools.py
+
+![#](documentation/validation/bag-tools.py.jpg)
+
+- apps.py
+
+![#](documentation/validation/bag-app-test.jpg)
+
+- contexts.py
+
+![#](documentation/validation/bag-context-test.jpg)
+
+- urls.py
+
+![#](documentation/validation/bag-url-test.jpg)
+
+- views.py
+
+![#](documentation/validation/bag-views-test.jpg)
+
+# Checkout app
+- admin.py
+
+![#](documentation/validation/checkout-admin-test.jpg)
+
+- apps.py
+
+![#](documentation/validation/checkout-apps-test.jpg)
+
+- forms.py
+
+![#](documentation/validation/checkout-forms-test.jpg)
+
+- models.py
+
+![#](documentation/validation/checkout-model-test.jpg)
+
+- signals.py
+
+![#](documentation/validation/checkout-signals.jpg)
+
+- urls.py
+
+![#](documentation/validation/checkout-urls.py.jpg)
+
+- views.py
+
+![#](documentation/validation/checkout-views-test.jpg)
+
+- webhook_handler.py
+
+The following files contain lines too long which cannot be broken.
+
+![#](documentation/validation/webhook-handler-test.jpg)
+
+- webhooks.py
+
+![#](documentation/validation/webhooks-test.jpg)
+
+---
+# Coder space app
+
+- Settings.py
+The following files contain lines too long which cannot be broken.
+
+![#](documentation/validation/code-space-settings.jpg)
+
+- urls.py
+
+![#](documentation/validation/code-space-urls.jpg)
+
+- Views.py
+
+![#](documentation/validation/code-space-views.jpg)
+
+---
+# Contact app
+- admin.py
+
+![#](documentation/validation/contact-admin.jpg)
+
+- apps.py
+
+![#](documentation/validation/Contact-apps.jpg)
+
+- forms.py
+
+![#](documentation/validation/Contact-form.jpg)
+
+- urls.py
+
+![#](documentation/validation/Contact-url.jpg)
+
+- models.py
+
+![#](documentation/validation/Contact-model.jpg)
+
+- Views.py
+
+![#](documentation/validation/Contact-views.jpg)
+
+---
+# Home app
+
+- apps.py
+
+![#](documentation/validation/home-apps.jpg)
+
+- Urls.py
+
+![#](documentation/validation/home-urls.jpg)
+
+- Views.py
+
+![#](documentation/validation/home-views.jpg)
+
+---
+# Newsletter app
+- admin.py
+
+![#](documentation/validation/newsletter-admin.jpg)
+
+- apps.py
+
+![#](documentation/validation/news-apps.jpg)
+
+- forms.py
+
+![#](documentation/validation/news-forms.jpg)
+
+- urls.py
+
+![#](documentation/validation/news-urls.jpg)
+
+- models.py
+
+![#](documentation/validation/news-models.jpg)
+
+- Views.py
+
+![#](documentation/validation/news-views.jpg)
+
+---
+# Products app
+- admin.py
+
+![#](documentation/validation/prod-admin.jpg)
+
+- apps.py
+
+![#](documentation/validation/prod-apps.jpg)
+
+- forms.py
+
+![#](documentation/validation/profile-forms.jpg)
+
+- urls.py
+
+![#](documentation/validation/prod-urls.jpg)
+
+- models.py
+
+![#](documentation/validation/prod-models.jpg)
+
+- Views.py
+
+![#](documentation/validation/prod-views.jpg)
+
+---
+# Profiles app
+
+- apps.py
+
+![#](documentation/validation/profile-app.jpg)
+
+- forms.py
+
+![#](documentation/validation/profile-forms.jpg)
+
+- urls.py
+
+![#](documentation/validation/profile-urls.jpg)
+
+- models.py
+
+![#](documentation/validation/profile-models.jpg)
+
+- Views.py
+
+![#](documentation/validation/profile-views.jpg)
+
+# Reviews app
+- admin.py
+
+![#](documentation/validation/review-admin.jpg)
+
+- apps.py
+
+![#](documentation/validation/review-app.jpg)
+
+- forms.py
+
+![#](documentation/validation/review-form.jpg)
+
+- urls.py
+
+![#](documentation/validation/review-url.jpg)
+
+- models.py
+
+![#](documentation/validation/review-models.jpg)
+
+- Views.py
+
+![#](documentation/validation/profile-views.jpg)
+
+---
+
+# LightHouse
+
+![#](documentation/validation/lighthouse.jpg)
+
+Best practices score was a little lower then expected due to the frount having Javascript visable on the front-end.
+
+![#](documentation/validation/lighthouse-best.jpg)
+
+---
+
+# Browser Compatibility
+- Google Chrome
+
+![#](documentation/validation/Google-chrome.jpg)
+
+
+- Edge
+
+![#](documentation/validation/edge.jpg)
+
+
+- Firefox
+
+![#](documentation/validation/firefox.jpg)
+
+
+---
+
+# Responsiveness
+The project was developed on Acer Predator 15.6 inch screen without issue. After deployment the project was further tested on 
+
+- Samsung Galaxy A12
+
+![#](documentation/validation/Samsung-galaxy-a12.jpg)
+
+
+- Samsung Tablet
+
+![#](documentation/validation/Samsung-tablet.jpg)
+
+---
+
+# Bugs and Fixes
+Any bugs that were flagged during development were fixed and resolved with no further issue.
+There is one bug that remains and after through investigating, this bug is still unresolved.
+ 
+ # Bugs unresolved.
+ 
+ **Order email not sent**
+
+## Debugging process
+ 1. When the user complete the checkout, confirmation page appears and advises user that a confirmation email will be sent.
+ 2. Checkout purchase completes without any issue and stripe recognises this event.
+
+ ![#](documentation/screenshots/stripe-1.jpg)
+
+ ![#](documentation/screenshots/stripe-3.jpg)
+
+ 3. A few minutes later that payment intent succeeded fails with a 500 error.
+
+ ![#](documentation/screenshots/stripe-fail.jpg)
+
+ 4. While payment intent is successful, the failing payment_intent.succeeded with 500 error is preventing any order confirmation email to be sent.
+
+ 5. Multiple steps have been taken to try resolve this issue including:
+- Slack
+- Creating new webhooks
+- Checking secret keys on heroku and stripe to make sure there wasn't a copying issue
+- Check code for webhook and webhook handler against boutique ado code.
+- Checking terminal in Git pod ( No error is returned, but no email is sent either)
+- Checking logs in heroku ( No issue detected, again no email is sent)
+- Ensuring all other emails (Verification, password reset and newsletter subscription) all send to user without issue.
+- Consulting Stripe documents.
+
+
+6. Having checked [Stripe documents](https://stripe.com/docs/api/errors) and consulting the error codes that can occur, Error 500 code indicates a server error.
+
+ ![#](documentation/screenshots/stripe-info.jpg)
+
+ ![#](documentation/screenshots/stripe-code.jpg)
+
+7. While the documentation may suggest a server error on stripes server, I am unsure if this is the issue causing payment intent to fail.
+
+8. Having exhausted all debugging to resolve this, I have been unsucessful in resolving this issue.
+
+9. While the checkout process is successfull and works without issue, the customer doesn't recieve a confirmation email. This is reflected in the agile kanban board and email confirmation has been left as a work in progress. This issue has been ommitted from testing against user stories and the bug still unresolved.
