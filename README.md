@@ -17,9 +17,40 @@
     - [Structure](#Structure)
     - [Database](#Database)
     - [Models](#Models)
-    - [Skeleton](#Skeleton)
+    - [Wireframes](#Wireframes)
+    - [Design](#Design)
+    - [Colors](#Colors)
+    - [Typography](#Typography)
+    - [Images](#Images)
+    
+- ##  [Features](#Features)
+    - [Navbar](#Navbar)
+    - [Footer](#Footer)
+    - [Home](#Home)
+    - [Products](#Products)
+    - [Add products](#Add-products)
+    - [Profile](#Profile)
+    - [Register](#Register)
+    - [Login](#Login)
+    - [Logout](#Logout)
+    - [Shopping bag](#Shopping-bag)
+    - [Checkout](#Checkout)
+    - [Error pages](#Error-pages)
+    - [Future Features](#Future-features)
 
+- ##  [Languages and Technologies](#Languages-and-Technologies)
+    - [Languages](#Languages)
+    - [Frameworks](#Frameworks)
+    - [Database](#Database)
+    - [Other Technologies](#Other-Technologies)
+    - [Testing](#Testing)
 
+- ##  [Deployment](#Deployment) 
+    - [Heroku](#Heroku)
+    - [Forking](#Forking)
+    - [Cloning](#Cloning)    
+
+- ##  [Credits](#Credits) 
 
 # UX Design
 ---
@@ -184,9 +215,8 @@ A simple newsletter subscription model that allows the user to subscribe to an o
 
 ---
 
-## Skeleton
+## Wireframes
 
-### Wireframes
 Wireframe created to help assist the design element and keep the project within the original design idea.
 Some elements have been changed for a more appealing design on the final project.
 
@@ -237,4 +267,352 @@ Some elements have been changed for a more appealing design on the final project
 
 - Contact Page
 
-![Home](documentation/wireframes/10-contact-wireframe.jpg)
+![Contact](documentation/wireframes/10-contact-wireframe.jpg)
+
+---
+
+## Design 
+
+### Overall design of site
+
+- The emphasis is to look professional and modern and to showcase the high quality products for sale. Research on websites selling similar products, seemed very clutter and over loaded with information, products and color. From this I decided that a netural color scheme with a pop of color within the navigation of the site would help prevent that cluttered over loaded experience, whilst providing individual card for each product with enough space between the images. Clear labeled product names situated at the top of the image and price and rating below the image. As the product images are a range of colors, a netural color scheme was chosen for the background where the images would be displayed. The navigation, buttons, links, footer and dropdown menu where all kept the same color to help the user intuitively navigate the site with ease.
+
+
+### Colors
+
+The colors for the site was choosen from the home page image. Having a majority of white in the site made it very cold and clinical, I decided that the netural color would be black, bold enough to make a statement but a netural color to not over power the product images. I choose a sky blue (from the home image) to clash against the black to provide that bright color contrast. This is the only bright colour used in the color scheme as the products images are colorful enough without overloading the visuals on the site.   
+
+![Main colours](documentation/screenshots/color-chart.jpg)
+
+---
+
+### Typography
+
+- [Chakra petch](https://fonts.google.com/specimen/Chakra+Petch?query=Chakra+Petch) was used for all text throughout the site. This font gives a digital, commanding vibe but is easy to read whilst being stylish. It looks bold but contrasts well with the blue and black colored texts.
+
+---
+
+### Images
+As it is an ecommerce site, sourcing original products and images for that type of store selling product to create your own home office area was a large task. All product images were sourced from [Amazon Uk](https://www.amazon.co.uk/) and [barcode look up ](https://www.barcodelookup.com/) was used for the images on the site (recommendation from slack) and [Adobe express](https://www.adobe.com/express/) was used to modify some of the image to show the coder space logo.
+
+---
+# Features
+
+## Navbar
+
+- Logo: The logo is Coder Space name separate by a robot style icon, chosen to be instantly recognisable to site users. The logo links to the home page and is positioned on the left as this is where the user expects it to be. Logo was created using
+[Adobe express](https://www.adobe.com/express/)
+
+![nav-logo](documentation/screenshots/nav-logo.jpg)
+
+- Page links: On large screens the nav links are centered directly under the search bar. On smaller screens the nav links are compressed into a drop down menu.
+
+![Full nav](documentation/screenshots/full-nav.jpg)
+
+![mobile nav](documentation/screenshots/mobile-links.jpg)
+
+![dropdown nav](documentation/screenshots/nav-bar-mobile.jpg)
+
+- Search Box - On large screens a search box appears the center of the  top menu. Users can enter a single word to search within the title or description of a product. Users can click enter or the magnifying glass icon to enter the search. The products list is then filtered by the search term and resulting products are displayed with the number of results displayed above. If no products are found '0 products found' is displayed. On smaller screens the search box is contained within an icon and dropsdown when clicked for user to search.
+
+![Search](documentation/screenshots/search-mobile.jpg)
+
+- Shopping Basket: On large screens the shopping basket appears on the right of the search bar. The basket is coloured blue in keeping with the brand color and to make it stand out in the menu. When clicked the icon opens up the current basket page. Below the basket is an indicator of the total cost of the items currently in the basket, also coloured blue to match the basket. On smaller screens the basket icon is positioned on the far right of the screen.
+
+![Basket full](documentation/screenshots/full-nav.jpg)
+
+![Basket mobile](documentation/screenshots/mobile-links.jpg)
+
+- When the navigation page menu links are hovered over their colours are inverted to blue background and white font colour.
+
+![nav](documentation/screenshots/nav-hover.jpg)
+
+![nav hover](documentation/screenshots/nav-hover2.jpg)
+
+---
+## Footer
+- The footer is divided into three sections: Quick Links to the about page, contact page & privacy policy. A newsletter subscribe button.  A section with the social media icon links.
+
+![Footer](documentation/screenshots/footer.jpg)
+
+- About Page: Located within quick likns in the footer, is an infomative page about the store. With two CTA buttons one for contacting the store and the other to shop.
+
+![About](documentation/screenshots/about.jpg)
+
+
+- Contact Us: The contact page is located within the quick links sectiion in the footer. A mean for the user to contact the store with any queries. A simple form with user feed back after submitting their query.
+
+![contact](documentation/screenshots/contact-success.jpg)
+
+- Privacy policy: This is located in the quick links within the footer. When user click on the privacy link, the page opens on a seperate page with all the details regarding the privacy for Coder Space. The full privacy policy can be found [here](https://www.privacypolicygenerator.info/live.php?token=WGMqQK9vmPgIx2LPPPY4Bmg9gHJl9FGJ)
+
+![Privacy](documentation/screenshots/priv-pol.jpg)
+
+- Newsletter subscription: Located central within the footer with a CTA button for user to subscribe to a newsletter. The Subcription form is on a seperate page with only an email field to be filled out. The link to unsubscribe is also with the subscription page.
+
+![Sub](documentation/screenshots/sub-news.jpg)
+
+---
+
+## Home Page
+- The home page is a simple page, with a CTA button to shop now which opens the all products page. The main image give the user an idea of the what the store is before entering the products or shop now button.
+
+![Home](documentation/screenshots/home-page.jpg)
+
+---
+## All products page
+- This page displays all products available on the store. 
+
+- Can be accesed by the shop now button on the home page or all products link on the nav bar.
+
+- On smaller screens the all products link can be found in the dropdown menu or home link in the footer.
+
+- Each product image in the product list links to its product detail page
+
+![Products](documentation/screenshots/prod-xlg.jpg)
+
+- Edit/delete buttons are visible to superuser/administrator under the product price but not to a non-admin user
+
+![Products](documentation/screenshots/admin-prod.jpg)
+
+---
+
+## Product detail page.
+
+- Each product detail page features a large image of the product.
+
+- Large product name top right above the description.
+
+- On the right side of the page is the price, product description, quantity selector, product reviews, keep shopping button and an add to bag button. 
+
+![Products](documentation/screenshots/prod-detail.jpg)
+
+- Edit/ delete button are only viewable to superusers/admin, located beside the rating.
+
+![add](documentation/screenshots/admin-add-form.jpg)
+
+- A quantity selector box with + - selector to increase/decrease quantity of item. Users can also enter a whole number or use arrows inside box to increase/decrease the quantity of the item
+
+- Two CTA buttons - one to return to the main Shop page and one to add the item(s) to shopping basket
+
+![add](documentation/screenshots/amount.jpg)
+
+---
+
+## Add products page
+
+- The Add Product page can only be accessed by the administrator/superuser and is only visible in the navbar Profile dropdown menu if the user is logged in as administrator or superuser.
+
+![admin-login](documentation/screenshots/admin-view.jpg)
+
+- This page features a form for the administrator/superuser to add a product with fields from the product model: Category, product name, description and price.
+
+- The form to edit a product can be accessed only by the administrator from the products or product detail page. This is the same form as to add a product with the fields auto completed which can be changed by the administrator.
+
+![admin-add](documentation/screenshots/admin-add-prod.jpg)
+
+---
+
+## Profile
+- The link to this page can only be seen if a user is logged in.
+
+- On the left the delivery information is displayed if the user has selected save my info during checkout process.
+
+![Profile](documentation/screenshots/profile.jpg)
+
+- The user can change the default information by entering information into the fields
+
+- An update information button is below the delivery information form which can be clicked to submit and save changed information
+
+- On the right the user's order history is displayed in a table with order number, date of order, items ordered and the order total. The Order number is truncated but on hover the full number can be viewed. On click the full past order confirmation is displayed.
+
+---
+
+## Register
+
+- Features a form with input boxes for email and email confirmation, username, password and password confirmation
+
+![Register](documentation/screenshots/register.jpg)
+
+
+## Login
+
+- Features a form with input boxes for required fields username and password
+
+![Login](documentation/screenshots/sign-in.jpg)
+
+## Log out
+
+- Features a button to click at the bottom of the form to sign out 
+
+![Logout](documentation/screenshots/sign-out.jpg)
+
+---
+
+## Shopping bag
+
+- Features summary information of products added to the shopping basket: image of products, title, size, price, delivery cost and total
+
+![Basket](documentation/screenshots/cost-view-2.jpg)
+
+---
+
+## Checkout
+
+- The Checkout page features input boxes for the necessary payment information inputs: name, email, phone number, street address, town or city, country, post code, country
+
+![checkout](documentation/screenshots/check-1.jpg)
+
+![checkout2](documentation/screenshots/check-2.jpg)
+
+- At the bottom is the box for card payment information for Stripe. For testing purposes the number 4242 4242 4242 4242 is used
+
+- Two selectors are at the bottom to return to adjust the basket or complete order buttons to complete the payment process
+
+- After checking out a success message and order confirmation are displayed
+
+![Order](documentation/screenshots/order-confirm.jpg)
+
+---
+
+## Error pages
+
+- 404: A 404 page was created to handle users' navigational errors and to direct them back to the website. The navigation menu and logo are visible on the page
+
+![404](documentation/screenshots/404-error.jpg)
+
+- 500: A 500 server error page was created to handle internal server errors
+
+![500](documentation/screenshots/500-error.jpg)
+
+---
+
+## Future Features
+
+- FAQ'S section for questions the users might have in relation to products, delivery and refunds.
+
+- Rating system that allows users to rate products on the review form.
+
+- Reviews from user link to a admin profile and reviews can be deleted from the admin profile.
+
+- A wishlist function that allows users to mark a product and it then appears in their profile under a wishlist section.
+
+---
+
+# Languages and Technologies
+
+## Languages
+
+* [HTML5](https://en.wikipedia.org/wiki/HTML5) was used to build the front-end website
+* [CSS](https://en.wikipedia.org/wiki/CSS) was used to style the HTML and add responsiveness
+* [JavaScript](https://www.javascript.com/) (no custom JS) was used with Bootstrap to provide interaction on the front-end
+* [Bootstrap 4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/) was used to style the website, add responsiveness and interactivity
+* [Python](https://www.python.org/) was used to code the back end of the project
+* [PyPI](https://pypi.org/) to install the python packages
+* [boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) was used to connect the project to AWS
+
+### Frameworks
+
+* [Django 3.2.8](https://docs.djangoproject.com/en/3.2/)
+* Django supporting libraries:
+  - [allauth](https://django-allauth.readthedocs.io/en/latest/installation.html) for authentication, registration, account management as well as 3rd party (social) account authentication
+  - [crispy-forms](https://django-crispy-forms.readthedocs.io/) to style the forms
+  - [gunicorn](https://gunicorn.org/) as the server for Heroku
+  - [psycopg2](https://pypi.org/project/psycopg2/) as an adaptor for Python and PostgreSQL databases
+  - [dj-database](https://pypi.org/project/dj-database-url/) to parse the database URL from the environment variables in Heroku
+  - [django-storages](https://django-storages.readthedocs.io/en/latest/) was used for backend storage with AWS
+  - [django-countries](https://pypi.org/project/django-countries/) was used to provide a country field for the Order model
+  - [Pillow](https://pillow.readthedocs.io/en/stable/) was used to manage images for Python
+
+
+## Database
+
+* [Elephant Postgres](https://www.elephantsql.com/) was used for the database in production and development
+
+## Other Technologies
+* [Amazon Web Services](https://aws.amazon.com/) was used to host the static files and media
+* [Gitpod](https://github.com//) was used as the IDE
+* [Git](https://git-scm.com/) was used for version control via the terminal in Gitpod
+* [GitHub](https://github.com/) was used to store the code in the repository
+* [Heroku](https://www.heroku.com/) was used as the cloud based platform for deployment
+* [Stripe](https://stripe.com/en-ie) was used to handle payment transactions
+* [Fontawesome](https://fontawesome.com/) was used for icons
+* [Google Fonts](https://fonts.google.com/) was used for the fonts
+* [Balsamiq](https://balsamiq.com/) was used for the wireframes
+* [Google Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) was used to inspect the website during development to check reponsiveness, contrast and JS errors in the console
+* [Favicon.io](https://favicon.io/favicon-converter/) was used to generate the favicon
+* [Am I responsive](https://ui.dev/amiresponsive) was used for the site mockups
+* [Google Chrome](https://www.google.com/intl/en_ie/chrome/) was used for previewing the project in the browser
+* [Google Sheets](https://www.google.com/sheets/about/) was used for the database schema tables
+* [Adobe Express](https://www.adobe.com/express/create) was used for the Coder Space logo and photo editing.
+* [W3C Markup Validation Service](https://validator.w3.org/) was used to validate the HTML
+* [W3C CSS Validation Service(Jigsaw)](https://jigsaw.w3.org/css-validator/) was used to validate the CSS
+* [PEP8 from Code Institute](https://pep8ci.herokuapp.com/) was used to validate the Python code
+* [JSHint](https://jshint.com/) was used to check for errors in Javascript
+* [Coolors](https://coolors.co) was used to generate the colour palettes
+* [TinyPNG](https://tinypng.com/) was used to resize images for the website
+* [Barcode Look up](https://www.barcodelookup.com/) was used for images on the ecommerce site.
+* [Amazon](https://www.amazon.co.uk) was used to source products for the ecommerce site.
+
+## Testing
+
+Please see separate TESTING.md file [here](https://github.com/Charte-dot/Coder-Space/blob/main/TESTING.md)
+
+---
+
+## Deployment
+### Heroku
+* This project was deployed using [Heroku](https://heroku.com/)
+* The steps are as follows:
+
+1. Navigate to [Heroku.com](https://heroku.com/) and log in or create a new account.
+2. On the top right hand side, click 'New' and from the dropdown menu select 'Create new app'
+3. Create a name for you app in this case it's `coder-space`.
+4. Select your region, in this case it is `Europe`.
+5. Click on `Create App` button to create your app in Heroku.
+6. Once app is created and redirected to [Heroku](https://heroku.com/) dashboard, navigate to the settings tab and scroll down to `Reveal Config Vars`.
+7. In `Config Vars` enter your `AWS_ACCESS_KEY_ID, DATABASE-URL(ElephantSql postgres), SECRET_KEY, EMAIL_HOST_PASSWORD, STRIPE_PUBLIC_KEY, STRIPE_SECRET_KEY,STRIPE_WH_SECRET, USE_AWS set to true  `
+8. Also while in development add `DISABLE_COLLECTSTATIC value 1`. Remove this when deploying project.
+9. Once The Config Vars is set up, scroll below to `Buildpacks` and select `Heroku/python and click save changes. 
+10. To deploy the projects, navigate to the `deploy` tab on the top nav bar.
+11. Select `Github` and a confirmation should show `connected`.
+12. In the box below search for the repository you want to link up to Heroku. In this case: https://github.com/Charte-dot/Coder-Space
+13. When the repository has been located click connect to link Github to Heroku.
+14. Once the repository is connected, click ` Enable Automatic Deploys` for automatic deployment. In this project Automatic Deployment was not enabled.
+15. For this project I choose to Manually deploy the project, to manually deploy click `Deploy branch` instead. All changes that have been pushed to Github will then deploy.
+16. Once the build process is complete you can then view the live app by clicking `View` button.
+
+### Local Deployment: Forking and Cloning
+#### Forking the Repository
+
+* To fork the project navigate to Coder Space repository at https://github.com/Charte-dot/Coder-Space
+
+* Above the list of files click the dropdown menu.
+* Select the https option and copy link.
+* Open terminal.
+* Change the current working directory to the desired destination location.
+* Click 'fork' at the top right of the page. A forked copy of the repository will appear in the Repositoties.
+
+#### Cloning the Repository
+
+* On Github navigate to the main page of Coder Space at https://github.com/Charte-dot/Coder-Space
+* Above the list of files click the dropdown code menu.
+* Select the https option and copy the link.
+* Open the terminal.
+* Change the current working directory to the desired destination location.
+* Type the git clone command with copied URL: `git clone https://github.com/Charte-dot/Coder-Space.git`.
+* Press enter to create the local clone.
+
+---
+
+## Credits
+
+- Code Institute walkthrough 'Boutique Ado' was used as a guide for this project.
+
+- [Stack overflow](https://stackoverflow.com/) and [Slack](https://slack.com/intl/en-ie/) were used for general queries and bug fixing
+
+- [Django Tutorial](https://www.youtube.com/watch?v=yZPgBThZT04) was used to assist in building the newletter subscription.
+
+- [Barcode Look up](https://www.barcodelookup.com/) was used for images on the ecommerce site.
+
+- [Amazon](https://www.amazon.co.uk) was used to source products for the ecommerce site.
