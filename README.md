@@ -12,7 +12,7 @@
     - [Business Goals](#Business-goals)
     - [Customer Goals](#customer-goals)
     - [User Stories](#User-stories)
-    - [Seo and web marketing](#Seo-and-web-marketing)
+    - [SEO and web marketing](#SEO-and-web-marketing)
     - [Scope](#Scope)
     - [Structure](#Structure)
     - [Database](#Database)
@@ -46,6 +46,7 @@
     - [Testing](#Testing)
 
 - ##  [Deployment](#Deployment) 
+    - [ElephantSQL](#ElephantSQL)
     - [Heroku](#Heroku)
     - [Forking](#Forking)
     - [Cloning](#Cloning)    
@@ -561,6 +562,22 @@ Please see separate TESTING.md file [here](https://github.com/Charte-dot/Coder-S
 ---
 
 ## Deployment
+
+### ElephantSQL
+* This project was developed using an external database [ElephantSQL](https://www.elephantsql.com/)
+* The steps are as follows:
+1. Navigate to [ElephantSQL](https://www.elephantsql.com/) and log in or create a new account.
+2. Create a New Instance
+3. Set up your plan and give it a name, most commonly project name ie coder-space.
+4. Select region in this case EU-WEST-1 (Ireland)
+5. Check details are correct and click 'create instance'.
+6. Head back to ElephnatSQL dashboard and click on the database instance that has jsut been created for this project.
+7. Copy the database url and paste this url in to Settings file on gitpod to connect to the new ElephantSQL database
+8. To check that the database is connected, On the ElephantSQL page for your database, in the left side navigation, select 'BROWSER'
+9. Click the Table queries button, select auth_user
+10. When you click “Execute”, you should see your newly created superuser details displayed. This confirms your tables have been created and you can add data to your database.
+
+
 ### Heroku
 * This project was deployed using [Heroku](https://heroku.com/)
 * The steps are as follows:
