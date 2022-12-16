@@ -216,6 +216,12 @@ footer {
     margin-top: 5%;
     font-family: 'Chakra Petch', sans-serif;
     font-size: 180%;
+
+}
+
+.title {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 150%;
 }
 
 /* Product Review */
